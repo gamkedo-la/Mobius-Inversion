@@ -25,4 +25,12 @@ public class PlayerControl : MonoBehaviour
             GameObject shotGO = GameObject.Instantiate(shotPrefab, transform.position, Quaternion.identity);
         }
     }
+    void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.gameObject.layer == LayerMask.NameToLayer("EnemyBullets"))
+        {
+            Destroy(gameObject);
+        }
+    }
+
 }
