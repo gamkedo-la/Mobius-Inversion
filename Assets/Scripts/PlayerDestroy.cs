@@ -18,9 +18,12 @@ public class PlayerDestroy : MonoBehaviour
         
     }
 
-    void OnTriggerEnter2D(Collider2D other)
+    void OnCollisionEnter2D(Collision2D other)
     {
-        Destroy(gameObject);
-        Debug.Log("Hit");
+        if (other.gameObject.layer == LayerMask.NameToLayer("PlayerBullets"))
+        {
+            Destroy(gameObject);            
+        }
+        Debug.Log(other.gameObject.layer + " " + gameObject.layer);
     }
 }
