@@ -24,6 +24,5 @@ public class PlayerDestroy : MonoBehaviour
         {
             Destroy(gameObject);            
         }
-        Debug.Log(other.gameObject.layer + " " + gameObject.layer);
     }
 }
