@@ -63,6 +63,7 @@ public class PlayerControl : MonoBehaviour
         myRend.enabled = false;
 
         StartCoroutine(Respawn());
+
     }
 
     IEnumerator Respawn ()
@@ -73,15 +74,12 @@ public class PlayerControl : MonoBehaviour
         Debug.Log("Turn on stuff");
         myRend.enabled = true;
         transform.position = startPos;
+        StartCoroutine(AutoShoot());
     }
 
     IEnumerator AutoShoot()
     {
-        if(isDead)
-        {
-            yield return new WaitForSeconds(1.0f);
-        }
-        while (true)
+        while (true && isDead == false)
         {
             GameObject shotGO = GameObject.Instantiate(shotPrefab, transform.position, Quaternion.identity);
             yield return new WaitForSeconds(.5f);
