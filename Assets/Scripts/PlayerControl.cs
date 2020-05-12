@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerControl : MonoBehaviour
 {
     public GameObject shotPrefab;
+	[SerializeField] Canvas pauseScreen;
 
     private float horizSpeed = 14.0f;
     private float vertSpeed = 11.3f;
@@ -36,8 +37,19 @@ public class PlayerControl : MonoBehaviour
         /*if(Input.GetKeyDown(KeyCode.Space)) {        
             GameObject shotGO = GameObject.Instantiate(shotPrefab, transform.position, Quaternion.identity);
         }*/
+
+		if (Input.GetButtonUp("Pause")) 
+		{
+			TogglePause();
+		}
         
     }
+
+	void TogglePause() 
+	{
+		if (Time.timeScale > 0) Time.timeScale = 0;
+		else Time.timeScale = 1.0f;
+	}
     void OnCollisionEnter2D(Collision2D other)
     {
         if(isDead)
