@@ -19,6 +19,7 @@ public class PlayerControl : MonoBehaviour
     {
         myRend = GetComponentInChildren<Renderer>();
         startPos = transform.position;
+        StartCoroutine(AutoShoot());
     }
 
     // Update is called once per frame
@@ -32,9 +33,10 @@ public class PlayerControl : MonoBehaviour
         transform.position += Vector3.up * Input.GetAxis("Vertical") * vertSpeed * Time.deltaTime +
                 Vector3.right * Input.GetAxis("Horizontal") * horizSpeed * Time.deltaTime;
 
-        if(Input.GetKeyDown(KeyCode.Space)) {
+        /*if(Input.GetKeyDown(KeyCode.Space)) {        
             GameObject shotGO = GameObject.Instantiate(shotPrefab, transform.position, Quaternion.identity);
-        }
+        }*/
+        
     }
     void OnCollisionEnter2D(Collision2D other)
     {
@@ -71,5 +73,18 @@ public class PlayerControl : MonoBehaviour
         Debug.Log("Turn on stuff");
         myRend.enabled = true;
         transform.position = startPos;
+    }
+
+    IEnumerator AutoShoot()
+    {
+        if(isDead)
+        {
+            yield return new WaitForSeconds(1.0f);
+        }
+        while (true)
+        {
+            GameObject shotGO = GameObject.Instantiate(shotPrefab, transform.position, Quaternion.identity);
+            yield return new WaitForSeconds(.5f);
+        }
     }
 }

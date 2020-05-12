@@ -16,7 +16,7 @@ public class EnemyShooting : MonoBehaviour
         while(true)
         {
             GameObject shotGO = GameObject.Instantiate(shotPrefab, transform.position, Quaternion.identity);
-            yield return new WaitForSeconds(0.2f);
+            yield return new WaitForSeconds(0.4f);
            
         }
     }
