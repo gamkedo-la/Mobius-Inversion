@@ -4,10 +4,13 @@ using UnityEngine;
 
 public class EnemyMoving : MonoBehaviour
 {
-
+    public Transform[] waypointList;
     private Vector3 pos1 = new Vector3(18, -15, 20);
     private Vector3 pos2 = new Vector3(18, 15, 20);
-    public float speed = 1.0f;
+    public float speed = 5.0f;
+    private int currentWayPoint = 0;
+    private float progressPerk = 0.0f;
+
 
     void Update()
     {
@@ -15,8 +18,20 @@ public class EnemyMoving : MonoBehaviour
         {
             return; //off the right side of the screen            
         }
-
-        transform.position = Vector3.Lerp(pos1, pos2, (Mathf.Sin(speed * Time.time) + 1.0f) / 2.0f);
+        progressPerk += Time.deltaTime * speed;
+        if(progressPerk >= 1.0f)
+        {
+            progressPerk -= 1.0f;
+            currentWayPoint++;
+        }
+        if(currentWayPoint >= waypointList.Length - 1)
+        {
+            return;
+        }
+        Vector3 pos = Vector3.Lerp(waypointList[currentWayPoint].position, waypointList[currentWayPoint + 1].position, progressPerk);     
+        Quaternion rot = Quaternion.Slerp(waypointList[currentWayPoint].rotation, waypointList[currentWayPoint + 1].rotation, progressPerk);
+        transform.position = pos;
+        transform.rotation = rot;
     }
 }
 
