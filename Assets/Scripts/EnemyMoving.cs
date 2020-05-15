@@ -28,10 +28,17 @@ public class EnemyMoving : MonoBehaviour
         {
             return;
         }
-        Vector3 pos = Vector3.Lerp(waypointList[currentWayPoint].position, waypointList[currentWayPoint + 1].position, progressPerk);     
-        Quaternion rot = Quaternion.Slerp(waypointList[currentWayPoint].rotation, waypointList[currentWayPoint + 1].rotation, progressPerk);
+        float smoothPerk = Ease(progressPerk);
+        Vector3 pos = Vector3.Lerp(waypointList[currentWayPoint].position, waypointList[currentWayPoint + 1].position, smoothPerk);     
+        Quaternion rot = Quaternion.Slerp(waypointList[currentWayPoint].rotation, waypointList[currentWayPoint + 1].rotation, smoothPerk);
         transform.position = pos;
         transform.rotation = rot;
+    }
+    
+
+    private float Ease(float inValue)
+    {
+        return inValue * inValue;
     }
 }
 
