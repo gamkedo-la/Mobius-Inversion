@@ -11,6 +11,11 @@ public class EnemyMoving : MonoBehaviour
 
     void Update()
     {
+        if(transform.position.x > Bounds.instance.rightX)
+        {
+            return; //off the right side of the screen            
+        }
+
         transform.position = Vector3.Lerp(pos1, pos2, (Mathf.Sin(speed * Time.time) + 1.0f) / 2.0f);
     }
 }
