@@ -5,22 +5,14 @@ using UnityEngine;
 public class EnemyShooting : MonoBehaviour
 {
     public GameObject shotPrefab;
+    public bool battling = false;
 
     // Start is called before the first frame update
     void Start()
     {
-        StartCoroutine(AutoShoot());
-    }
-    IEnumerator AutoShoot()
-    {
-        while(true)
-        {
-            GameObject shotGO = GameObject.Instantiate(shotPrefab, transform.position, Quaternion.identity);
-            yield return new WaitForSeconds(0.4f);
-          
-        }
-    }
 
+    }
+    
     // Update is called once per frame
     void Update()
     {
@@ -28,6 +20,29 @@ public class EnemyShooting : MonoBehaviour
         {
             return; //off the right side of the screen            
         }
-        //StartCoroutine(AutoShoot());
+        else
+        {
+            Debug.Log("Battle True!");
+            StartCoroutine(AutoShoot());
+        }
+    }
+
+    void Shooting()
+    {
+        StartCoroutine(AutoShoot());
+    }
+
+    IEnumerator AutoShoot()
+    {
+        if (battling == false)
+        {
+            while (true)
+            {
+                battling = true;
+                Debug.Log("Battle False!");
+                GameObject shotGO = GameObject.Instantiate(shotPrefab, transform.position, Quaternion.identity);
+                yield return new WaitForSeconds(0.4f);
+            }
+        }           
     }
 }
