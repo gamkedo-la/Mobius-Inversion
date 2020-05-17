@@ -10,7 +10,7 @@ public class PlayerControl : MonoBehaviour
     private float horizSpeed = 14.0f;
     private float vertSpeed = 11.3f;
 
-    private bool isDead = true;
+    public bool isDead = false;
     private Renderer myRend;
 
 	private Camera mainCamera;

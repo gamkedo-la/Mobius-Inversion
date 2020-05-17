@@ -17,13 +17,17 @@ public class EnemyShooting : MonoBehaviour
         {
             GameObject shotGO = GameObject.Instantiate(shotPrefab, transform.position, Quaternion.identity);
             yield return new WaitForSeconds(0.4f);
-           
+          
         }
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (transform.position.x > Bounds.instance.rightX)
+        {
+            return; //off the right side of the screen            
+        }
+        //StartCoroutine(AutoShoot());
     }
 }
