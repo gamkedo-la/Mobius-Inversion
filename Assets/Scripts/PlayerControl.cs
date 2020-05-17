@@ -16,6 +16,8 @@ public class PlayerControl : MonoBehaviour
 	private Camera mainCamera;
     private Vector3 startPos;
 
+    GameObject playerBody;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -23,6 +25,8 @@ public class PlayerControl : MonoBehaviour
         myRend = GetComponentInChildren<Renderer>();
         startPos = transform.position;
         StartCoroutine(AutoShoot());
+        playerBody = GameObject.FindGameObjectWithTag("PlayerBody");
+        playerBody.SetActive(true);
     }
 
     // Update is called once per frame
@@ -85,6 +89,7 @@ public class PlayerControl : MonoBehaviour
         isDead = true;
         Debug.Log("Turn off stuff");
         myRend.enabled = false;
+        playerBody.SetActive(false);
 
         StartCoroutine(Respawn());
 
@@ -97,6 +102,7 @@ public class PlayerControl : MonoBehaviour
         isDead = false;
         Debug.Log("Turn on stuff");
         myRend.enabled = true;
+        playerBody.SetActive(true);
         transform.position = startPos;
         StartCoroutine(AutoShoot());
     }
