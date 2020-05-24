@@ -77,6 +77,10 @@ public class PlayerControl : MonoBehaviour
         {
             DeathThenRespawn();
         }
+        if (other.gameObject.layer == LayerMask.NameToLayer("EnemyShip"))
+        {
+            DeathThenRespawn();
+        }
     }
 
     void DeathThenRespawn()
