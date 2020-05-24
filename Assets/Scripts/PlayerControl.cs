@@ -115,7 +115,7 @@ public class PlayerControl : MonoBehaviour
     {
         while (true && isDead == false)
         {
-            GameObject shotGO = GameObject.Instantiate(shotPrefab, transform.position, Quaternion.identity);
+            GameObject shotGO = GameObject.Instantiate(shotPrefab, transform.position, Quaternion.identity, transform.parent);
             yield return new WaitForSeconds(.5f);
         }
     }
