@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEditor;
 
 public class EnemyMoving : MonoBehaviour
 {
@@ -40,5 +41,22 @@ public class EnemyMoving : MonoBehaviour
     {
         return inValue * inValue;
     }
+
+	public void OnDrawGizmosSelected() {
+		if (waypointList.Length <= 0) return;
+
+		//Would be cleaner if this just pointed to the "waypoint set" instead of manually defining every waypoint in a public array
+		/*
+		GameObject waypointset = waypointList[0].transform.parent.gameObject;
+		//waypointset.GetComponent<WaypointSetGizmo>().DrawWaypointPath();
+		*/
+		
+		int length = waypointList.Length;
+		Gizmos.color = Color.red;
+		for (int i = 0; i < length; i++) {
+			if (i < length - 1) Gizmos.DrawLine(waypointList[i].position, waypointList[i + 1].position);
+			Gizmos.DrawSphere(waypointList[i].position, 0.5f);
+		}
+	}
 }
 
