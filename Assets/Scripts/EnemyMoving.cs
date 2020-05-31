@@ -12,6 +12,46 @@ public class EnemyMoving : MonoBehaviour
     private int currentWayPoint = 0;
     private float progressPerk = 0.0f;
 
+    public AnimationCurve speedCurve;
+
+    public class FollowCurve : EditorWindow
+    {
+        AnimationCurve curveX = AnimationCurve.Linear(0, 0, 10, 10);
+        AnimationCurve curveY = AnimationCurve.Linear(0, 0, 10, 10);
+        AnimationCurve curveZ = AnimationCurve.Linear(0, 0, 10, 10);
+
+        [MenuItem("Examples/Create Curve For Object")]
+        static void Init()
+        {
+            FollowCurve window = (FollowCurve)EditorWindow.GetWindow(typeof(FollowCurve));
+            window.Show();
+        }
+
+        void OnGUI()
+        {
+            curveX = EditorGUILayout.CurveField("Animation on X", curveX);
+            curveY = EditorGUILayout.CurveField("Animation on Y", curveY);
+            curveZ = EditorGUILayout.CurveField("Animation on Z", curveZ);
+
+            if (GUILayout.Button("Generate Curve"))
+                AddCurveToSelectedGameObject();
+        }
+
+        void AddCurveToSelectedGameObject()
+        {
+            if (Selection.activeGameObject)
+            {
+                FollowAnimationCurve comp =
+                    Selection.activeGameObject.AddComponent<FollowAnimationCurve>();
+
+                comp.SetCurves(curveX, curveY, curveZ);
+            }
+            else
+            {
+                Debug.LogError("No Game Object selected for adding an animation curve");
+            }
+        }
+    }
 
     void Update()
     {
@@ -34,8 +74,7 @@ public class EnemyMoving : MonoBehaviour
         Quaternion rot = Quaternion.Slerp(waypointList[currentWayPoint].rotation, waypointList[currentWayPoint + 1].rotation, smoothPerk);
         transform.position = pos;
         transform.rotation = rot;
-    }
-    
+    }    
 
     private float Ease(float inValue)
     {
