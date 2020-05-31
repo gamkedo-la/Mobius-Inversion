@@ -22,7 +22,7 @@ public class EnemyShooting : MonoBehaviour
         }
         else
         {
-            Debug.Log("Battle True!");
+            //Debug.Log("Battle True!");
             StartCoroutine(AutoShoot());
         }
     }
@@ -39,7 +39,7 @@ public class EnemyShooting : MonoBehaviour
             while (true)
             {
                 battling = true;
-                Debug.Log("Battle False!");
+                //Debug.Log("Battle False!");
                 GameObject shotGO = GameObject.Instantiate(shotPrefab, transform.position, Quaternion.identity);
                 yield return new WaitForSeconds(0.4f);
             }

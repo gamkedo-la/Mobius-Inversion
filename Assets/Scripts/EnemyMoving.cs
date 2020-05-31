@@ -41,10 +41,10 @@ public class EnemyMoving : MonoBehaviour
         {
             if (Selection.activeGameObject)
             {
-                FollowAnimationCurve comp =
-                    Selection.activeGameObject.AddComponent<FollowAnimationCurve>();
+                //FollowAnimationCurve comp =
+                //    Selection.activeGameObject.AddComponent<FollowAnimationCurve>();
 
-                comp.SetCurves(curveX, curveY, curveZ);
+                //comp.SetCurves(curveX, curveY, curveZ);
             }
             else
             {
