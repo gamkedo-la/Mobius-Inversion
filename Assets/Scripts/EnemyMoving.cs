@@ -5,7 +5,8 @@ using UnityEditor;
 
 public class EnemyMoving : MonoBehaviour
 {
-    public Transform[] waypointList;
+    public Transform waypointSet;
+    private List<Transform> waypointList;
     private Vector3 pos1 = new Vector3(18, -15, 20);
     private Vector3 pos2 = new Vector3(18, 15, 20);
     public float speed = 5.0f;
@@ -13,6 +14,16 @@ public class EnemyMoving : MonoBehaviour
     private float progressPerk = 0.0f;
 
     public AnimationCurve speedCurve;
+
+    void Start()
+    {
+        waypointList = new List<Transform>();
+        Debug.Log(gameObject.name + " " + (waypointSet != null));
+        for(int i = 0; i < waypointSet.childCount; i++)
+        {
+            waypointList.Add(waypointSet.GetChild(i));
+        }
+    }
 
     public class FollowCurve : EditorWindow
     {
@@ -65,7 +76,7 @@ public class EnemyMoving : MonoBehaviour
             progressPerk -= 1.0f;
             currentWayPoint++;
         }
-        if(currentWayPoint >= waypointList.Length - 1)
+        if(currentWayPoint >= waypointList.Count - 1)
         {
             return;
         }
@@ -82,7 +93,7 @@ public class EnemyMoving : MonoBehaviour
     }
 
 	public void OnDrawGizmosSelected() {
-		if (waypointList.Length <= 0) return;
+		if (waypointList.Count <= 0) return;
 
 		//Would be cleaner if this just pointed to the "waypoint set" instead of manually defining every waypoint in a public array
 		/*
@@ -90,7 +101,7 @@ public class EnemyMoving : MonoBehaviour
 		//waypointset.GetComponent<WaypointSetGizmo>().DrawWaypointPath();
 		*/
 		
-		int length = waypointList.Length;
+		int length = waypointList.Count;
 		Gizmos.color = Color.red;
 		for (int i = 0; i < length; i++) {
 			if (i < length - 1) Gizmos.DrawLine(waypointList[i].position, waypointList[i + 1].position);
