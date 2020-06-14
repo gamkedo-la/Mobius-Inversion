@@ -41,6 +41,7 @@ public class EnemyShooting : MonoBehaviour
                 battling = true;
                 //Debug.Log("Battle False!");
                 GameObject shotGO = GameObject.Instantiate(shotPrefab, transform.position, Quaternion.identity);
+                Debug.Log(transform.rotation);
                 yield return new WaitForSeconds(0.4f);
             }
         }           
