@@ -94,7 +94,7 @@ public class PlayerControl : MonoBehaviour
         myRend.enabled = true;
         playerBody.SetActive(true);
         transform.position = startPos;
-        //StartCoroutine(AutoShoot());
+        StartCoroutine(AutoShoot());
     }
 
     IEnumerator AutoShoot()
