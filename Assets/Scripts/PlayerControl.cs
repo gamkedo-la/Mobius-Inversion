@@ -66,38 +66,23 @@ public class PlayerControl : MonoBehaviour
 		else Time.timeScale = 1.0f;
 	}
 	
-    void OnCollisionEnter2D(Collision2D other)
+
+    public void DeathCheckThenRespawn(bool deadNow)
     {
-        Debug.Log(other.gameObject.name);
-        if(isDead)
+        if(isDead) //blocking it from happening if already dead
         {
             return;
         }
+        isDead = deadNow;
 
-        if (other.gameObject.layer == LayerMask.NameToLayer("EnemyBullets"))
+        if (isDead) //handling newly dead
         {
-            DeathThenRespawn();
+            Debug.Log("Turn off stuff");
+            myRend.enabled = false;
+            playerBody.SetActive(false);
+
+            StartCoroutine(Respawn());
         }
-        if (other.gameObject.layer == LayerMask.NameToLayer("EnemyShip"))
-        {
-            DeathThenRespawn();
-        }
-    }
-
-    void DeathThenRespawn()
-    {
-        if(isDead)
-        {
-            return;
-        }
-
-        isDead = true;
-        Debug.Log("Turn off stuff");
-        myRend.enabled = false;
-        playerBody.SetActive(false);
-
-        StartCoroutine(Respawn());
-
     }
 
     IEnumerator Respawn ()

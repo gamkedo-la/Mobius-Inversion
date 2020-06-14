@@ -8,12 +8,14 @@ public class PlayerHealth : MonoBehaviour
 
     public int maxHealth = 100;
     public int currentHealth;
+    private PlayerControl pcScript;
 
     public HealthBarScript healthBar;
 
     // Start is called before the first frame update
     void Start()
     {
+        pcScript = GetComponent<PlayerControl>();
         currentHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
     }
@@ -39,7 +41,7 @@ public class PlayerHealth : MonoBehaviour
     void TakeDamage(int damage)
     {
         currentHealth -= damage;
-
+        pcScript.DeathCheckThenRespawn(currentHealth<=0);
         healthBar.SetHealth(currentHealth);
     }
 }
