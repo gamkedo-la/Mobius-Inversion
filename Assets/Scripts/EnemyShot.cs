@@ -8,12 +8,12 @@ public class EnemyShot : MonoBehaviour
     void Start()
     {
         Destroy(gameObject, 4.0f);
-        transform.Rotate(0f, -90f, 0f);
+        //transform.Rotate(0f, -90f, 0f);
     }
 
     // Update is called once per frame
     void Update()
     {    
-        transform.position += Time.deltaTime * 20.0f * gameObject.transform.forward;
+        transform.position += Time.deltaTime * 20.0f * -gameObject.transform.right;
     }
 }

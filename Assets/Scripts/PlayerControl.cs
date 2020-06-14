@@ -68,6 +68,7 @@ public class PlayerControl : MonoBehaviour
 	
     void OnCollisionEnter2D(Collision2D other)
     {
+        Debug.Log(other.gameObject.name);
         if(isDead)
         {
             return;
@@ -108,7 +109,7 @@ public class PlayerControl : MonoBehaviour
         myRend.enabled = true;
         playerBody.SetActive(true);
         transform.position = startPos;
-        StartCoroutine(AutoShoot());
+        //StartCoroutine(AutoShoot());
     }
 
     IEnumerator AutoShoot()
