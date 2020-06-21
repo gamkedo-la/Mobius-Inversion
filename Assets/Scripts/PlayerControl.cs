@@ -16,8 +16,8 @@ public class PlayerControl : MonoBehaviour
 	private Camera mainCamera;
     private Vector3 startPos;
 
-    private PlayerControl pcScript;
     public HealthBarScript healthBar;
+    public int maxHealth = 100;
 
     GameObject playerBody;
 
@@ -30,7 +30,6 @@ public class PlayerControl : MonoBehaviour
         StartCoroutine(AutoShoot());
         playerBody = GameObject.FindGameObjectWithTag("PlayerBody");
         playerBody.SetActive(true);
-        pcScript = GetComponent<PlayerControl>();
     }
 
     // Update is called once per frame
@@ -81,7 +80,7 @@ public class PlayerControl : MonoBehaviour
 
         if (isDead) //handling newly dead
         {
-            Debug.Log("Turn off stuff");
+            //Debug.Log("Turn off stuff");
             myRend.enabled = false;
             playerBody.SetActive(false);
 
@@ -98,7 +97,7 @@ public class PlayerControl : MonoBehaviour
         myRend.enabled = true;
         playerBody.SetActive(true);
         transform.position = startPos;
-
+        healthBar.SetMaxHealth(maxHealth);
         StartCoroutine(AutoShoot());
     }
 

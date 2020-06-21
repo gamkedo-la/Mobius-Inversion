@@ -42,7 +42,6 @@ public class PlayerHealth : MonoBehaviour
     {
         currentHealth -= damage;
         healthBar.SetHealth(currentHealth);
-        pcScript.DeathCheckThenRespawn(currentHealth<=0);
-        
+        pcScript.DeathCheckThenRespawn(currentHealth<=0);       
     }
 }
