@@ -16,6 +16,9 @@ public class PlayerControl : MonoBehaviour
 	private Camera mainCamera;
     private Vector3 startPos;
 
+    private PlayerControl pcScript;
+    public HealthBarScript healthBar;
+
     GameObject playerBody;
 
     // Start is called before the first frame update
@@ -27,6 +30,7 @@ public class PlayerControl : MonoBehaviour
         StartCoroutine(AutoShoot());
         playerBody = GameObject.FindGameObjectWithTag("PlayerBody");
         playerBody.SetActive(true);
+        pcScript = GetComponent<PlayerControl>();
     }
 
     // Update is called once per frame
@@ -94,6 +98,7 @@ public class PlayerControl : MonoBehaviour
         myRend.enabled = true;
         playerBody.SetActive(true);
         transform.position = startPos;
+
         StartCoroutine(AutoShoot());
     }
 
