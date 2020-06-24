@@ -22,7 +22,9 @@ public class PlayerDestroy : MonoBehaviour
     {
         if (other.gameObject.layer == LayerMask.NameToLayer("PlayerBullets"))
         {
-            Destroy(gameObject);            
+            Destroy(gameObject);
+            Destroy(other.gameObject);
         }
+        
     }
 }

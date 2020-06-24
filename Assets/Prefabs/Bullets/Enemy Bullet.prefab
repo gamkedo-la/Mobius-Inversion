@@ -1,5 +1,31 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!61 &4237212518417419745
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4872233095228744872}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &5785942853262880280
 GameObject:
   m_ObjectHideFlags: 0
@@ -11,7 +37,6 @@ GameObject:
   - component: {fileID: 5785942853262880277}
   - component: {fileID: 5785942853262880276}
   - component: {fileID: -3156812991547329176}
-  - component: {fileID: -7814047636006752341}
   - component: {fileID: 3677438773289485432}
   m_Layer: 9
   m_Name: Enemy Bullet
@@ -55,32 +80,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6642aa3dc34ff97438e1040a45e00050, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!61 &-7814047636006752341
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5785942853262880280}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.09494853, y: 0.004855633}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1.5857549, y: 0.3714614}
-  m_EdgeRadius: 0
 --- !u!50 &3677438773289485432
 Rigidbody2D:
   serializedVersion: 4
@@ -202,6 +201,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: da494dc805e2eaa459c6b1ed2b34e0bf, type: 3}
+--- !u!1 &4872233095228744872 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: da494dc805e2eaa459c6b1ed2b34e0bf,
+    type: 3}
+  m_PrefabInstance: {fileID: 3511764521755458977}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8486751986154477243 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: da494dc805e2eaa459c6b1ed2b34e0bf,
