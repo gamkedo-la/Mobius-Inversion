@@ -21,13 +21,18 @@ public class PlayerControl : MonoBehaviour
 
     GameObject playerBody;
 
+    public bool debugWontFire = false;
+
     // Start is called before the first frame update
     void Start()
     {
 		mainCamera = (Camera) GameObject.FindWithTag("MainCamera").GetComponent(typeof(Camera));
         myRend = GetComponentInChildren<Renderer>();
         startPos = transform.position;
-        StartCoroutine(AutoShoot());
+        if(debugWontFire == false)
+        {
+            StartCoroutine(AutoShoot());
+        }        
         playerBody = GameObject.FindGameObjectWithTag("PlayerBody");
         playerBody.SetActive(true);
     }
@@ -103,7 +108,7 @@ public class PlayerControl : MonoBehaviour
 
     IEnumerator AutoShoot()
     {
-        while (true && isDead == false)
+        while (isDead == false)
         {
             GameObject shotGO = GameObject.Instantiate(shotPrefab, transform.position, Quaternion.identity, transform.parent);
             yield return new WaitForSeconds(.5f);

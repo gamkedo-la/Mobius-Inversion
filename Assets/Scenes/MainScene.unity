@@ -17846,7 +17846,7 @@ PrefabInstance:
         type: 3}
       propertyPath: waypointSet
       value: 
-      objectReference: {fileID: 372502057}
+      objectReference: {fileID: 996784981}
     - target: {fileID: 6532985535747910716, guid: 68ab3750f95ce084c851eea38b2a8bb3,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -29369,6 +29369,11 @@ PrefabInstance:
       propertyPath: healthBar
       value: 
       objectReference: {fileID: 1068403314}
+    - target: {fileID: 6518816927147422270, guid: 4065ade871be1034ba8a3bf861d43a65,
+        type: 3}
+      propertyPath: debugWontFire
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6518816927147422271, guid: 4065ade871be1034ba8a3bf861d43a65,
         type: 3}
       propertyPath: m_Offset.y

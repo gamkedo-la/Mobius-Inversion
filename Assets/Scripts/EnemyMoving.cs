@@ -97,6 +97,9 @@ public class EnemyMoving : MonoBehaviour
             progressPerk -= 1.0f;
             currentWayPoint++;
             UpdateCurrentIndexedWaypoint();
+            smoothPerk = Ease(progressPerk);
+
+            speedPerkHere = Mathf.Lerp(currentWayPointData.speedPerc, nextWayPointData.speedPerc, progressPerk);
         }
         if(currentWayPoint >= waypointList.Count - 1)
         {
