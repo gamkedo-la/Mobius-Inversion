@@ -10,6 +10,8 @@ public class PlayerControl : MonoBehaviour
     private float horizSpeed = 14.0f;
     private float vertSpeed = 11.3f;
 
+    public float rateOfFire;
+
     public bool isDead = false;
     private Renderer myRend;
 
@@ -111,7 +113,7 @@ public class PlayerControl : MonoBehaviour
         while (isDead == false)
         {
             GameObject shotGO = GameObject.Instantiate(shotPrefab, transform.position, Quaternion.identity, transform.parent);
-            yield return new WaitForSeconds(.5f);
+            yield return new WaitForSeconds(rateOfFire);
         }
     }
 }
