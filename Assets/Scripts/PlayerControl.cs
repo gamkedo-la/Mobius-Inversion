@@ -7,8 +7,8 @@ public class PlayerControl : MonoBehaviour
     public GameObject shotPrefab;
 	[SerializeField] private Vector2 boundaryPadding = new Vector2(15.0f, 10.0f);
 
-    private float horizSpeed = 14.0f;
-    private float vertSpeed = 11.3f;
+    public float horizSpeed = 14.0f;
+    public float vertSpeed = 11.3f;
 
     public float rateOfFire;
 
