@@ -4,27 +4,18 @@ using UnityEngine;
 
 public class PlayerDestroy : MonoBehaviour
 {
-
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
+    public GameObject enemyExplosion;
     void OnCollisionEnter2D(Collision2D other)
     {
         if (other.gameObject.layer == LayerMask.NameToLayer("PlayerBullets"))
         {
+                        
+            Instantiate(enemyExplosion, transform.position,transform.rotation);
             Destroy(gameObject);
             Destroy(other.gameObject);
+            
         }
         
-    }
-}
+        }
+
+ }
