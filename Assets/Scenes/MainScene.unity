@@ -479,6 +479,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ene_Shoot_Mov_Norm
       objectReference: {fileID: 0}
+    - target: {fileID: 6532985535111255223, guid: 68ab3750f95ce084c851eea38b2a8bb3,
+        type: 3}
+      propertyPath: waypointSet
+      value: 
+      objectReference: {fileID: 372502057}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 68ab3750f95ce084c851eea38b2a8bb3, type: 3}
 --- !u!4 &207416026 stripped
@@ -898,6 +903,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ene_Shoot_Mov_Fast
       objectReference: {fileID: 0}
+    - target: {fileID: 6532985535111255223, guid: 68ab3750f95ce084c851eea38b2a8bb3,
+        type: 3}
+      propertyPath: waypointSet
+      value: 
+      objectReference: {fileID: 372502057}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 68ab3750f95ce084c851eea38b2a8bb3, type: 3}
 --- !u!1001 &305568616
@@ -1693,6 +1703,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ene_Shoot_Mov_Norm (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6532985535111255223, guid: 68ab3750f95ce084c851eea38b2a8bb3,
+        type: 3}
+      propertyPath: waypointSet
+      value: 
+      objectReference: {fileID: 372502057}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 68ab3750f95ce084c851eea38b2a8bb3, type: 3}
 --- !u!4 &486021484 stripped
@@ -1768,6 +1783,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ene_Shoot_Mov_Fast (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 6532985535111255223, guid: 68ab3750f95ce084c851eea38b2a8bb3,
+        type: 3}
+      propertyPath: waypointSet
+      value: 
+      objectReference: {fileID: 372502057}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 68ab3750f95ce084c851eea38b2a8bb3, type: 3}
 --- !u!4 &503467655 stripped
@@ -2145,6 +2165,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ene_Shoot_Mov_Fast
       objectReference: {fileID: 0}
+    - target: {fileID: 6532985535111255223, guid: 68ab3750f95ce084c851eea38b2a8bb3,
+        type: 3}
+      propertyPath: waypointSet
+      value: 
+      objectReference: {fileID: 372502057}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 68ab3750f95ce084c851eea38b2a8bb3, type: 3}
 --- !u!1001 &615282211
@@ -2214,6 +2239,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ene_Shoot_Mov_Fast (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 6532985535111255223, guid: 68ab3750f95ce084c851eea38b2a8bb3,
+        type: 3}
+      propertyPath: waypointSet
+      value: 
+      objectReference: {fileID: 372502057}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 68ab3750f95ce084c851eea38b2a8bb3, type: 3}
 --- !u!4 &615282212 stripped
@@ -3054,6 +3084,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ene_Shoot_Mov_Norm (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6532985535111255223, guid: 68ab3750f95ce084c851eea38b2a8bb3,
+        type: 3}
+      propertyPath: waypointSet
+      value: 
+      objectReference: {fileID: 372502057}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 68ab3750f95ce084c851eea38b2a8bb3, type: 3}
 --- !u!4 &794354999 stripped
@@ -3292,6 +3327,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ene_Shoot_Mov_Norm (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 6532985535111255223, guid: 68ab3750f95ce084c851eea38b2a8bb3,
+        type: 3}
+      propertyPath: waypointSet
+      value: 
+      objectReference: {fileID: 372502057}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 68ab3750f95ce084c851eea38b2a8bb3, type: 3}
 --- !u!43 &820151767
@@ -3300,7 +3340,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-32210
+  m_Name: pb_Mesh-60988
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -3781,6 +3821,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ene_Shoot_Mov_Fast (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 6532985535111255223, guid: 68ab3750f95ce084c851eea38b2a8bb3,
+        type: 3}
+      propertyPath: waypointSet
+      value: 
+      objectReference: {fileID: 372502057}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 68ab3750f95ce084c851eea38b2a8bb3, type: 3}
 --- !u!1001 &908621858
@@ -3924,6 +3969,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ene_Shoot_Mov_Norm (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 6532985535111255223, guid: 68ab3750f95ce084c851eea38b2a8bb3,
+        type: 3}
+      propertyPath: waypointSet
+      value: 
+      objectReference: {fileID: 372502057}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 68ab3750f95ce084c851eea38b2a8bb3, type: 3}
 --- !u!4 &946430953 stripped
@@ -4595,6 +4645,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ene_Shoot_Mov_Norm (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 6532985535111255223, guid: 68ab3750f95ce084c851eea38b2a8bb3,
+        type: 3}
+      propertyPath: waypointSet
+      value: 
+      objectReference: {fileID: 372502057}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 68ab3750f95ce084c851eea38b2a8bb3, type: 3}
 --- !u!4 &1056190516 stripped
@@ -4908,6 +4963,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ene_Shoot_Mov_Norm (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6532985535111255223, guid: 68ab3750f95ce084c851eea38b2a8bb3,
+        type: 3}
+      propertyPath: waypointSet
+      value: 
+      objectReference: {fileID: 372502057}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 68ab3750f95ce084c851eea38b2a8bb3, type: 3}
 --- !u!4 &1102691592 stripped
@@ -5008,6 +5068,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ene_Shoot_Mov_Norm (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6532985535111255223, guid: 68ab3750f95ce084c851eea38b2a8bb3,
+        type: 3}
+      propertyPath: waypointSet
+      value: 
+      objectReference: {fileID: 372502057}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 68ab3750f95ce084c851eea38b2a8bb3, type: 3}
 --- !u!1001 &1182963454
@@ -5077,6 +5142,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ene_Shoot_Mov_Fast (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6532985535111255223, guid: 68ab3750f95ce084c851eea38b2a8bb3,
+        type: 3}
+      propertyPath: waypointSet
+      value: 
+      objectReference: {fileID: 372502057}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 68ab3750f95ce084c851eea38b2a8bb3, type: 3}
 --- !u!4 &1182963455 stripped
@@ -5152,6 +5222,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ene_Shoot_Mov_Fast (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6532985535111255223, guid: 68ab3750f95ce084c851eea38b2a8bb3,
+        type: 3}
+      propertyPath: waypointSet
+      value: 
+      objectReference: {fileID: 372502057}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 68ab3750f95ce084c851eea38b2a8bb3, type: 3}
 --- !u!1 &1222653274
@@ -9929,7 +10004,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-32326
+  m_Name: pb_Mesh-61104
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -10153,6 +10228,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ene_Shoot_Mov_Fast (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6532985535111255223, guid: 68ab3750f95ce084c851eea38b2a8bb3,
+        type: 3}
+      propertyPath: waypointSet
+      value: 
+      objectReference: {fileID: 372502057}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 68ab3750f95ce084c851eea38b2a8bb3, type: 3}
 --- !u!4 &1248052874 stripped
@@ -10317,6 +10397,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ene_Shoot_Mov_Norm
       objectReference: {fileID: 0}
+    - target: {fileID: 6532985535111255223, guid: 68ab3750f95ce084c851eea38b2a8bb3,
+        type: 3}
+      propertyPath: waypointSet
+      value: 
+      objectReference: {fileID: 372502057}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 68ab3750f95ce084c851eea38b2a8bb3, type: 3}
 --- !u!43 &1377575594
@@ -10652,6 +10737,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ene_Shoot_Mov_Fast
       objectReference: {fileID: 0}
+    - target: {fileID: 6532985535111255223, guid: 68ab3750f95ce084c851eea38b2a8bb3,
+        type: 3}
+      propertyPath: waypointSet
+      value: 
+      objectReference: {fileID: 372502057}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 68ab3750f95ce084c851eea38b2a8bb3, type: 3}
 --- !u!4 &1395677319 stripped
@@ -10805,6 +10895,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ene_Shoot_Mov_Norm (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6532985535111255223, guid: 68ab3750f95ce084c851eea38b2a8bb3,
+        type: 3}
+      propertyPath: waypointSet
+      value: 
+      objectReference: {fileID: 372502057}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 68ab3750f95ce084c851eea38b2a8bb3, type: 3}
 --- !u!4 &1407567938 stripped
@@ -11237,6 +11332,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ene_Shoot_Mov_Norm
       objectReference: {fileID: 0}
+    - target: {fileID: 6532985535111255223, guid: 68ab3750f95ce084c851eea38b2a8bb3,
+        type: 3}
+      propertyPath: waypointSet
+      value: 
+      objectReference: {fileID: 372502057}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 68ab3750f95ce084c851eea38b2a8bb3, type: 3}
 --- !u!43 &1512706628
@@ -11245,7 +11345,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-31198
+  m_Name: pb_Mesh-59976
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -11696,6 +11796,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ene_Shoot_Mov_Fast
       objectReference: {fileID: 0}
+    - target: {fileID: 6532985535111255223, guid: 68ab3750f95ce084c851eea38b2a8bb3,
+        type: 3}
+      propertyPath: waypointSet
+      value: 
+      objectReference: {fileID: 372502057}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 68ab3750f95ce084c851eea38b2a8bb3, type: 3}
 --- !u!4 &1609238144 stripped
@@ -11716,7 +11821,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-31134
+  m_Name: pb_Mesh-59912
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -11954,7 +12059,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-31186
+  m_Name: pb_Mesh-59964
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -17155,7 +17260,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-31266
+  m_Name: pb_Mesh-60044
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -17762,6 +17867,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ene_Shoot_Mov_Fast
       objectReference: {fileID: 0}
+    - target: {fileID: 6532985535111255223, guid: 68ab3750f95ce084c851eea38b2a8bb3,
+        type: 3}
+      propertyPath: waypointSet
+      value: 
+      objectReference: {fileID: 372502057}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 68ab3750f95ce084c851eea38b2a8bb3, type: 3}
 --- !u!4 &1833545580 stripped
@@ -18455,6 +18565,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ene_Shoot_Mov_Fast (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6532985535111255223, guid: 68ab3750f95ce084c851eea38b2a8bb3,
+        type: 3}
+      propertyPath: waypointSet
+      value: 
+      objectReference: {fileID: 372502057}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 68ab3750f95ce084c851eea38b2a8bb3, type: 3}
 --- !u!4 &2107731461 stripped
@@ -18536,6 +18651,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ene_Shoot_Mov_Fast (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6532985535111255223, guid: 68ab3750f95ce084c851eea38b2a8bb3,
+        type: 3}
+      propertyPath: waypointSet
+      value: 
+      objectReference: {fileID: 372502057}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 68ab3750f95ce084c851eea38b2a8bb3, type: 3}
 --- !u!1001 &2145659064
@@ -18605,6 +18725,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ene_Shoot_Mov_Norm
       objectReference: {fileID: 0}
+    - target: {fileID: 6532985535111255223, guid: 68ab3750f95ce084c851eea38b2a8bb3,
+        type: 3}
+      propertyPath: waypointSet
+      value: 
+      objectReference: {fileID: 372502057}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 68ab3750f95ce084c851eea38b2a8bb3, type: 3}
 --- !u!4 &2145659065 stripped
@@ -19073,6 +19198,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ene_Shoot_Mov_Norm
       objectReference: {fileID: 0}
+    - target: {fileID: 6532985535111255223, guid: 68ab3750f95ce084c851eea38b2a8bb3,
+        type: 3}
+      propertyPath: waypointSet
+      value: 
+      objectReference: {fileID: 372502057}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 68ab3750f95ce084c851eea38b2a8bb3, type: 3}
 --- !u!1001 &6518816928948498308

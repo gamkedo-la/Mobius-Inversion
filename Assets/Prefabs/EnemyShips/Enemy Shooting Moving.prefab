@@ -65,7 +65,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52ab29e12c8272f46b44e142d70a0d2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyExplosion: {fileID: 0}
+  enemyExplosion: {fileID: 8630629847321421960, guid: a0cc1e4f6d6fcf446ba8b7e6a6601673,
+    type: 3}
 --- !u!114 &6532985535111255223
 MonoBehaviour:
   m_ObjectHideFlags: 0
