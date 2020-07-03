@@ -20,7 +20,7 @@ public class EnemyShooting : MonoBehaviour
             //Debug.Log("Battle False!");
             if (transform.position.x < Bounds.instance.rightX)
             {
-                GameObject shotGO = GameObject.Instantiate(shotPrefab, transform.position, transform.rotation);
+                GameObject shotGO = GameObject.Instantiate(shotPrefab, transform.position, transform.rotation * Quaternion.AngleAxis(90.0f, Vector3.up));
             }      
         }
        
