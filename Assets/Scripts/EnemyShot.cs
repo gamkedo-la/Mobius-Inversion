@@ -16,4 +16,17 @@ public class EnemyShot : MonoBehaviour
     {
         transform.position += Time.deltaTime * 20.0f * -gameObject.transform.right;
     }
+
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        Debug.Log(collision.gameObject.name);
+        if(collision.gameObject.layer == LayerMask.NameToLayer("PlayerBullets"))
+        {
+            Destroy(gameObject);
+
+            Destroy(collision.gameObject);
+
+            Debug.Log("Bullets Mutually Annillated, TO DO: ADD EXPLOSION VFX");
+        }
+    }
 }

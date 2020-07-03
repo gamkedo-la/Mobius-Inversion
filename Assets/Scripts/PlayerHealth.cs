@@ -28,7 +28,7 @@ public class PlayerHealth : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D other)
     {
-        Debug.Log("Player touched by " + other.gameObject.name);
+        //Debug.Log("Player touched by " + other.gameObject.name);
 
         if (other.gameObject.layer == LayerMask.NameToLayer("EnemyBullets"))
         {
@@ -43,7 +43,7 @@ public class PlayerHealth : MonoBehaviour
     void TakeDamage(int damage)
     {
         currentHealth -= damage;
-        Debug.Log("Health now is " + currentHealth);
+        //Debug.Log("Health now is " + currentHealth);
         healthBar.SetHealth(currentHealth);
         pcScript.DeathCheckThenRespawn(currentHealth<=0);       
     }
