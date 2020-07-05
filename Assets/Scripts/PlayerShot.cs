@@ -20,7 +20,7 @@ public class PlayerShot : MonoBehaviour
     {
         if(collision.gameObject.name == "Right Edge 2D")
         {
-            Debug.Log("Touched 2D");
+            //Debug.Log("Touched 2D");
             Destroy(gameObject);
         }
     }
