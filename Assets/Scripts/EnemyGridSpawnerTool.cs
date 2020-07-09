@@ -18,28 +18,16 @@ public class EnemyGridSpawnerTool : MonoBehaviour
     Vector3 temp = new Vector3(0, 0, 0);
 
 
-    [ContextMenu("Preview Spawns")]
-    void preview()
-    {
-
-        spawnGird();
-
-    }
-
-
-
     // Start is called before the first frame update
     void Start()
     {
-      
-        
-          /*  foreach (Transform child in gameObject.transform)
-            {
-                GameObject.Destroy(child.gameObject);
-            }
-        */
 
-        spawnGird();
+        foreach (Transform child in gameObject.transform)
+        {
+            GameObject.Destroy(child.gameObject);
+        }
+
+        spawnGrid();
 
     }
 
@@ -50,8 +38,12 @@ public class EnemyGridSpawnerTool : MonoBehaviour
         
     }
 
-    void spawnGird()
+    public void spawnGrid()
     {
+        foreach (Transform child in gameObject.transform)
+        {
+            GameObject.DestroyImmediate(child.gameObject);
+        }
 
         temp = gameObject.transform.position;
 
