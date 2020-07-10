@@ -139,7 +139,7 @@ MonoBehaviour:
   isDead: 0
   healthBar: {fileID: 0}
   maxHealth: 100
-  debugWontFire: 0
+  debugWontFire: 1
 --- !u!114 &7548677705105023976
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -65112,7 +65112,7 @@ PrefabInstance:
     - target: {fileID: -927199367670048503, guid: 18b45b9be8662482e8ea2796100f2fad,
         type: 3}
       propertyPath: m_Name
-      value: Tank
+      value: Yellow
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 18b45b9be8662482e8ea2796100f2fad, type: 3}
