@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class PlayerHealth : MonoBehaviour
 {
-
+    public GameObject enemyExplosion;
     public int maxHealth = 100;
     public int currentHealth;
     private PlayerControl pcScript;
@@ -32,11 +32,13 @@ public class PlayerHealth : MonoBehaviour
 
         if (other.gameObject.layer == LayerMask.NameToLayer("EnemyBullets"))
         {
+            Instantiate(enemyExplosion, transform.position, transform.rotation);
             TakeDamage(20);
             Destroy(other.gameObject);
         }
         if (other.gameObject.layer == LayerMask.NameToLayer("EnemyShip"))
         {
+            Instantiate(enemyExplosion, transform.position, transform.rotation);
             TakeDamage(20);
             Destroy(other.gameObject);
         }
