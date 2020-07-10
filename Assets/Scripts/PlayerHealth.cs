@@ -33,10 +33,12 @@ public class PlayerHealth : MonoBehaviour
         if (other.gameObject.layer == LayerMask.NameToLayer("EnemyBullets"))
         {
             TakeDamage(20);
+            Destroy(other.gameObject);
         }
         if (other.gameObject.layer == LayerMask.NameToLayer("EnemyShip"))
         {
             TakeDamage(20);
+            Destroy(other.gameObject);
         }
     }
 
