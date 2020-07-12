@@ -15,6 +15,8 @@ public class EnemyGridSpawnerTool : MonoBehaviour
 
     public Transform Waypoints;
 
+    List<GameObject> kids;
+
     Vector3 temp = new Vector3(0, 0, 0);
 
 
@@ -24,7 +26,12 @@ public class EnemyGridSpawnerTool : MonoBehaviour
 
         foreach (Transform child in gameObject.transform)
         {
-            GameObject.Destroy(child.gameObject);
+            kids.Add(child.gameObject);
+        }
+
+        foreach (GameObject child in kids)
+        {
+            DestroyImmediate(child);
         }
 
         spawnGrid();
