@@ -25,6 +25,11 @@ public class PlayerControl : MonoBehaviour
 
     public bool debugWontFire = false;
 
+    public enum ShipColor { Green, Yellow, Red, Purple};
+    public ShipColor thisShip;
+    public ShipColor activeShip;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -47,16 +52,26 @@ public class PlayerControl : MonoBehaviour
             return;
         }
 
-        transform.position += Vector3.up * Input.GetAxis("Vertical") * vertSpeed * Time.deltaTime +
-                Vector3.right * Input.GetAxis("Horizontal") * horizSpeed * Time.deltaTime;
+        if (activeShip == thisShip)
+        {
 
-		transform.position = ClampToScreen(transform.position, mainCamera, boundaryPadding);
-		
-		/*if(Input.GetKeyDown(KeyCode.Space)) {        
+            transform.position += Vector3.up * Input.GetAxis("Vertical") * vertSpeed * Time.deltaTime +
+                    Vector3.right * Input.GetAxis("Horizontal") * horizSpeed * Time.deltaTime;
+
+            transform.position = ClampToScreen(transform.position, mainCamera, boundaryPadding);
+        }
+
+        /*if(Input.GetKeyDown(KeyCode.Space)) {        
             GameObject shotGO = GameObject.Instantiate(shotPrefab, transform.position, Quaternion.identity);
         }*/
 
-		if (Input.GetButtonUp("Pause")) 
+        if (Input.GetKeyDown(KeyCode.Alpha1)) { activeShip = ShipColor.Green; }
+        if (Input.GetKeyDown(KeyCode.Alpha2)) { activeShip = ShipColor.Yellow; }
+        if (Input.GetKeyDown(KeyCode.Alpha3)) { activeShip = ShipColor.Red; }
+        if (Input.GetKeyDown(KeyCode.Alpha4)) { activeShip = ShipColor.Purple; }
+
+
+        if (Input.GetButtonUp("Pause")) 
 		{
 			TogglePause();
 		}
