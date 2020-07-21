@@ -9,6 +9,6 @@ EditorBuildSettings:
     path: Assets/Scenes/MainScene.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 0
-    path: Assets/Scenes/Testscene_explosion.unity
+    path: Assets/Scenes/Testscene_explosion_Andy.unity
     guid: f577227943ffef643bcd21f334a4bc8c
   m_configObjects: {}
