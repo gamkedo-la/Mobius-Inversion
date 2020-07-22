@@ -15,7 +15,7 @@ public class HomingMissile : MonoBehaviour
     void Start()
     {
 
-        Destroy(gameObject, 4.0f);
+        //Destroy(gameObject, 4.0f);
 
         Target = Targeting();
     }
