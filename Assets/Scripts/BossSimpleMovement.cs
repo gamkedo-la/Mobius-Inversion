@@ -5,7 +5,7 @@ using UnityEngine;
 public class BossSimpleMovement : MonoBehaviour
 {
 
-    public int upeperBound;
+    public int upperBound;
     public int lowerBound;
 
     public float step;
@@ -23,16 +23,19 @@ public class BossSimpleMovement : MonoBehaviour
     void Update()
     {
 
-        positionTemp.y += step;
-
-        gameObject.transform.position = positionTemp;
-
-        if( positionTemp.y > upeperBound || positionTemp.y < lowerBound)
+        if (GetComponent<BossStages>().Stage == 1)
         {
-            step *= -1;
+
+            positionTemp.y += step;
+
+            gameObject.transform.position = positionTemp;
+
+            if (positionTemp.y > upperBound || positionTemp.y < lowerBound)
+            {
+                step *= -1;
+
+            }
 
         }
-
-
     }
 }
