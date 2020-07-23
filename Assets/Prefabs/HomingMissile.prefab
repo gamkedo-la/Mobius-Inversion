@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6096904377634891123}
   - component: {fileID: 6096904377634891127}
   - component: {fileID: 6096904377634891120}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: HomingMissile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -112,7 +112,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6096904378150290245}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -215,6 +215,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: AlienProjectile
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: ac90fbc755457234eb95efd17e9fb3fb,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ac90fbc755457234eb95efd17e9fb3fb, type: 3}
