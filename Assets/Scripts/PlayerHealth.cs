@@ -11,9 +11,14 @@ public class PlayerHealth : MonoBehaviour
     private PlayerControl pcScript;
 
     public HealthBarScript healthBar;
-    public float shieldTimeUp = 1.0f;
-    private float shieldLastTime = 4.0f;
+    //public float shieldTimeUp = 1.0f;
+    //private float shieldLastTime = 4.0f;
     private PlayerShield shield;
+    public int shieldMaxHealth;
+    public int shieldCurrentHealth;
+    public float shieldRegen;
+    public GameObject gameObjectShield;
+
 
     // Start is called before the first frame update
     void Start()
@@ -22,26 +27,40 @@ public class PlayerHealth : MonoBehaviour
         shield = GetComponentInChildren<PlayerShield>();
         currentHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
+        //gameObjectShield = GameObject.Find("/Players&UI/PlayerShipBlue/PlayerShield");
+        //gameObjectShield = shield.gameObject;
+        shield.gameObject.SetActive(false);
     }
 
     // Update is called once per frame
     void Update()
     {
-      if(shield && shieldTimeUp > 0)
+        if(Input.GetKey(KeyCode.E))
+        {
+            shield.gameObject.SetActive(true);
+        }
+        else
+        {
+            shield.gameObject.SetActive(false);
+        }
+
+
+        /*
+        if(shield && shieldTimeUp > 0)
         {
             shieldTimeUp -= Time.deltaTime / shieldLastTime;
             if(shieldTimeUp <= 0)
             {
                 shield.gameObject.SetActive(false);
             }
-        }
+        }*/
     }
 
     void OnCollisionEnter2D(Collision2D other)
     {
         //Debug.Log("Player touched by " + other.gameObject.name);
 
-        if (shieldTimeUp > 0)
+        if (shieldCurrentHealth > 0)
         {
             return;
         }
