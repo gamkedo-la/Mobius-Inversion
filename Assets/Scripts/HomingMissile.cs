@@ -61,7 +61,7 @@ public class HomingMissile : MonoBehaviour
 
             Destroy(collision.gameObject);
 
-            Debug.Log("Bullets Mutually Annillated, TO DO: ADD EXPLOSION VFX");
+            Debug.Log("homing missle destroyed by player bullet, TO DO: ADD EXPLOSION VFX");
         }
     }
 

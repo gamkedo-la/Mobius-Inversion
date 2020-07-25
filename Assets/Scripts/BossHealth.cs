@@ -7,6 +7,9 @@ public class BossHealth : MonoBehaviour
 
     public int HitPoints = 100;
 
+    public int Stage;
+    
+
     // Start is called before the first frame update
     void Start()
     {
@@ -22,11 +25,17 @@ public class BossHealth : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D other)
     {
+
+
+
         if (other.gameObject.layer == LayerMask.NameToLayer("PlayerBullets"))
         {
 
-            HitPoints -= 10;
-            
+
+            if (GameObject.Find("Boss").GetComponent<BossStages>().Stage == Stage)
+            {
+                HitPoints -= 10;
+            }
             Destroy(other.gameObject);
 
             if(HitPoints <= 0)
