@@ -13,7 +13,7 @@ public class PlayerHealth : MonoBehaviour
     public HealthBarScript healthBar;
     //public float shieldTimeUp = 1.0f;
     //private float shieldLastTime = 4.0f;
-    private PlayerShield shield;
+    private PlayerShieldRedHit shield;
     public int shieldMaxHealth;
     public int shieldCurrentHealth;
     public float shieldRegen;
@@ -24,7 +24,7 @@ public class PlayerHealth : MonoBehaviour
     void Start()
     {
         pcScript = GetComponent<PlayerControl>();
-        shield = GetComponentInChildren<PlayerShield>();
+        shield = GetComponentInChildren<PlayerShieldRedHit>();
         currentHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
         //gameObjectShield = GameObject.Find("/Players&UI/PlayerShipBlue/PlayerShield");
