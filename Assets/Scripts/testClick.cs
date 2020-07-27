@@ -20,11 +20,11 @@ public class testClick : MonoBehaviour
             RaycastHit hit;
             if (Physics.Raycast(ray, out hit, 100f))
             {
-                ShieldRaycast ShieldRaycast = hit.collider.gameObject.GetComponent<ShieldRaycast>();
-                if (ShieldRaycast)
+                ShieldRaycast shieldRaycast = hit.collider.gameObject.GetComponent<ShieldRaycast>();
+                if (shieldRaycast)
                 {
                     decaytime = 3f;
-                    ShieldRaycast.SetHitPosition(hit.point, decaytime);
+                    shieldRaycast.SetHitPosition(hit.point, decaytime);
                 }
                /*  print(hit.point);
                 print(hit.collider.gameObject); */
