@@ -24,7 +24,7 @@ public class PlayerShieldRedHit : MonoBehaviour
             //Instantiate(enemyExplosion, other.transform.position, transform.rotation);
             //decaytime = 3f;
             Vector3 shieldhit = other.gameObject.transform.position; 
-            shieldhit.z = other.transform.position.z; 
+            shieldhit.z = other.transform.position.z + Random.Range(-2.0f,1.0f); 
             shieldRaycast.SetHitPosition(shieldhit, decaytime);
             Destroy(other.gameObject);
         }
