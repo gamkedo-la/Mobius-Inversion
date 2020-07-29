@@ -5,6 +5,9 @@ using UnityEngine;
 public class EnemyShooting : MonoBehaviour
 {
     public GameObject shotPrefab;
+    public AudioSource shotAudio;
+    public AudioClip   shotClip;
+    public float shotVolume=0.5f;
 
     // Start is called before the first frame update
     void Start()
@@ -21,6 +24,7 @@ public class EnemyShooting : MonoBehaviour
             if (transform.position.x < Bounds.instance.rightX)
             {
                 GameObject shotGO = GameObject.Instantiate(shotPrefab, transform.position, transform.rotation * Quaternion.AngleAxis(0.0f, Vector3.up));
+                shotAudio.PlayOneShot(shotClip, shotVolume);
             }      
         }
        
