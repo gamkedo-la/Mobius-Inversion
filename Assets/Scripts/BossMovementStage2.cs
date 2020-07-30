@@ -6,8 +6,14 @@ public class BossMovementStage2 : MonoBehaviour
 {
     public Vector3 Target;
     public GameObject bombPrefab;
+    public GameObject bulletPrefab;
 
     public Vector3 bombLauncher;
+
+    public Transform bulletWave1;
+    public Transform bulletWave2;
+    public Transform bulletWave3;
+    public Transform bulletWave4;
 
 
     public float speed;
@@ -17,6 +23,9 @@ public class BossMovementStage2 : MonoBehaviour
 
     public float dist;
 
+    float timer = 4.0f;
+    float timerReset;
+
 
     // Start is called before the first frame update
     void Start()
@@ -24,6 +33,16 @@ public class BossMovementStage2 : MonoBehaviour
         Target = gameObject.transform.position;
 
         Destination();
+
+        timerReset = timer;
+
+        bombLauncher = gameObject.transform.position;
+        bombLauncher.x -= 5;
+
+        
+
+
+
     }
 
     // Update is called once per frame
@@ -57,6 +76,24 @@ public class BossMovementStage2 : MonoBehaviour
                 gameObject.transform.position = Vector3.MoveTowards(gameObject.transform.position, Target, step);
 
             }
+
+            timer -= Time.fixedDeltaTime;
+
+            if (timer <= 0)
+            {
+
+
+                GameObject bullet = (GameObject)Instantiate(bulletPrefab, bulletWave1.position, Quaternion.identity);
+                bullet = (GameObject)Instantiate(bulletPrefab, bulletWave2.position, Quaternion.identity);
+                bullet = (GameObject)Instantiate(bulletPrefab, bulletWave3.position, Quaternion.identity);
+                bullet = (GameObject)Instantiate(bulletPrefab, bulletWave4.position, Quaternion.identity);
+
+
+
+                timer = timerReset;
+
+            }
+
         }
 
     }
