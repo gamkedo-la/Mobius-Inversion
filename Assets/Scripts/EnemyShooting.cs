@@ -24,7 +24,7 @@ public class EnemyShooting : MonoBehaviour
             if (transform.position.x < Bounds.instance.rightX)
             {
                 GameObject shotGO = GameObject.Instantiate(shotPrefab, transform.position, transform.rotation * Quaternion.AngleAxis(0.0f, Vector3.up));
-                shotAudio.PlayOneShot(shotClip, shotVolume);
+                shotAudio.PlayOneShot(shotClip, shotVolume*Random.Range(0.1f,2f));
             }      
         }
        

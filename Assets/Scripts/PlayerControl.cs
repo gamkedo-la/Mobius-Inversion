@@ -29,6 +29,10 @@ public class PlayerControl : MonoBehaviour
     public ShipColor thisShip;
     public ShipColor activeShip;
 
+    public AudioSource shotAudio;
+    public AudioClip   shotClip;
+    public float shotVolume=0.5f;
+
 
     // Start is called before the first frame update
     void Start()
@@ -129,6 +133,7 @@ public class PlayerControl : MonoBehaviour
         {
             GameObject shotGO = GameObject.Instantiate(shotPrefab, transform.position, Quaternion.identity, transform.parent);
             yield return new WaitForSeconds(rateOfFire);
+            shotAudio.PlayOneShot(shotClip, shotVolume*Random.Range(0.5f,1.5f));
         }
     }
 }
