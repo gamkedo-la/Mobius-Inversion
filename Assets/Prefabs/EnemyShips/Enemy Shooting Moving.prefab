@@ -69,6 +69,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyExplosion: {fileID: 8630629847321421960, guid: a0cc1e4f6d6fcf446ba8b7e6a6601673,
     type: 3}
+  shotAudio: {fileID: 7992793635664333069}
+  shotClip: {fileID: 8300000, guid: e500d6d83420aaf439bd0eb9f9d0d0f8, type: 3}
+  shotVolume: 1.5
 --- !u!114 &6532985535111255223
 MonoBehaviour:
   m_ObjectHideFlags: 0
