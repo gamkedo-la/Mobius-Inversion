@@ -47,7 +47,13 @@ public class EnemyGridSpawnerTool : MonoBehaviour
 
     public void spawnGrid()
     {
+
         foreach (Transform child in gameObject.transform)
+        {
+            kids.Add(child.gameObject);
+        }
+
+        foreach (GameObject child in kids)
         {
             GameObject.DestroyImmediate(child.gameObject);
         }
