@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum ShipColor { Green, Yellow, Red, Purple };
+
 public class PlayerControl : MonoBehaviour
 {
     public GameObject shotPrefab;
@@ -25,7 +27,7 @@ public class PlayerControl : MonoBehaviour
 
     public bool debugWontFire = false;
 
-    public enum ShipColor { Green, Yellow, Red, Purple};
+    
     public ShipColor thisShip;
     public ShipColor activeShip;
 
@@ -132,6 +134,8 @@ public class PlayerControl : MonoBehaviour
         while (isDead == false)
         {
             GameObject shotGO = GameObject.Instantiate(shotPrefab, transform.position, Quaternion.identity, transform.parent);
+            shotGO.GetComponent<PlayerShot>().FiredFrom = thisShip;
+
             yield return new WaitForSeconds(rateOfFire);
             shotAudio.PlayOneShot(shotClip, shotVolume*Random.Range(0.5f,1.5f));
         }
