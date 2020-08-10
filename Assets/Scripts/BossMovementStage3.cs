@@ -41,6 +41,8 @@ public class BossMovementStage3 : MonoBehaviour
     public Transform bulletWave3;
     public Transform bulletWave4;
 
+    public GameObject[] players;
+
 
     // Start is called before the first frame update
     void Start()
@@ -167,8 +169,8 @@ public class BossMovementStage3 : MonoBehaviour
 
     void SelectTarget()
     {
-        GameObject[] players;
-        players = GameObject.FindGameObjectsWithTag("Player");
+        
+        
 
         Index = (Random.Range(0, players.Length) - 1);
 
