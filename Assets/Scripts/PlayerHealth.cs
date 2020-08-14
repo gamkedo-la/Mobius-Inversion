@@ -29,21 +29,26 @@ public class PlayerHealth : MonoBehaviour
         healthBar.SetMaxHealth(maxHealth);
         //gameObjectShield = GameObject.Find("/Players&UI/PlayerShipBlue/PlayerShield");
         //gameObjectShield = shield.gameObject;
-        shield.gameObject.SetActive(false);
+        if (shield)
+        {
+            shield.gameObject.SetActive(false);
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKey(KeyCode.E))
+        if (shield)
         {
-            shield.gameObject.SetActive(true);
+            if (Input.GetKey(KeyCode.E))
+            {
+                shield.gameObject.SetActive(true);
+            }
+            else
+            {
+                shield.gameObject.SetActive(false);
+            }
         }
-        else
-        {
-            shield.gameObject.SetActive(false);
-        }
-
 
         /*
         if(shield && shieldTimeUp > 0)
