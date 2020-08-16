@@ -10,11 +10,13 @@ public class HoverColourText : MonoBehaviour
 {
     
     [SerializeField] private GameObject textcolour;
+    [SerializeField] private AudioSource UIaudiosource;
+    [SerializeField] private AudioClip   UIbeep;
     public void onHover()
     {
         TextMeshProUGUI textmeshPro = textcolour.GetComponent<TextMeshProUGUI>();
         textmeshPro.color = new Color32(255, 214, 53, 255);
-       
+        UIaudiosource.PlayOneShot(UIbeep, 0.5f);
     }
 
     public void onExit()
