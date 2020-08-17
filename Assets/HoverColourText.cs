@@ -46,7 +46,7 @@ public class HoverColourText : MonoBehaviour
     public void gotoOptionsScene()
         {
             UIaudiosource.PlayOneShot(UIclick, 0.5f);
-            SceneManager.LoadSceneAsync("OptionsScene_Andy");
+            SceneManager.LoadSceneAsync("OptionsScene_Andy", LoadSceneMode.Additive);
         }
     
 
