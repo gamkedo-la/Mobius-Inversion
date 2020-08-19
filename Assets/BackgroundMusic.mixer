@@ -87,7 +87,7 @@ AudioMixerController:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: BackgroundMusic
-  m_OutputGroup: {fileID: 0}
+  m_OutputGroup: {fileID: 24300002, guid: 6fc588b3fcc5feb42ba3a7f042a36741, type: 2}
   m_MasterGroup: {fileID: 24300002}
   m_Snapshots:
   - {fileID: 24500006}
@@ -106,7 +106,7 @@ AudioMixerController:
     - 2b2da69c367a7ec4492b86ce57f1e477
     name: View
   m_CurrentViewIndex: 0
-  m_TargetSnapshot: {fileID: 3789087793250765506}
+  m_TargetSnapshot: {fileID: 24500006}
 --- !u!243 &24300002
 AudioMixerGroupController:
   m_ObjectHideFlags: 0

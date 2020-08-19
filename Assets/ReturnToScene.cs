@@ -9,8 +9,8 @@ public class ReturnToScene : MonoBehaviour
    
    public void unloadOptions ()
         {
-            SceneManager.UnloadSceneAsync("OptionsScene_Andy");
-
+             Time.timeScale = 1;
+             SceneManager.UnloadSceneAsync("OptionsScene_Andy");
         }
     
 }
