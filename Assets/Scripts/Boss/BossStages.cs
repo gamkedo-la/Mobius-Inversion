@@ -10,7 +10,9 @@ public class BossStages : MonoBehaviour
     public GameObject Body;
     public GameObject Core;
 
-    public int Stage = 1;
+    public int Stage;
+
+    public bool SkipIntro = false;
 
 
 
@@ -18,6 +20,19 @@ public class BossStages : MonoBehaviour
     void Start()
     {
         
+        if(SkipIntro  == true)
+        {
+
+            Stage = 1;
+
+        }
+        if(SkipIntro == false)
+        {
+
+            Stage = 0;
+
+        }
+
     }
 
     // Update is called once per frame

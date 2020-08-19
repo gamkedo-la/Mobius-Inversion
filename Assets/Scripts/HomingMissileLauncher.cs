@@ -17,14 +17,16 @@ public class HomingMissileLauncher : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-        Timer -= Time.fixedDeltaTime;
-
-        if (Timer <= 0)
+        if (GameObject.Find("Boss").GetComponent<BossStages>().Stage == 1)
         {
-            Launch();
-            Timer = Reset;
+            Timer -= Time.fixedDeltaTime;
 
+            if (Timer <= 0)
+            {
+                Launch();
+                Timer = Reset;
+
+            }
         }
 
     }

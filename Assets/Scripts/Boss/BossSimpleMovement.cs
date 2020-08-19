@@ -10,13 +10,13 @@ public class BossSimpleMovement : MonoBehaviour
 
     public float step;
 
-    Vector3 positionTemp = new Vector3(0,0,0);
+    Vector3 positionTemp = new Vector3(16.5f, 0, 20);
 
 
     // Start is called before the first frame update
     void Start()
     {
-        positionTemp = gameObject.transform.position;
+        
     }
 
     // Update is called once per frame
