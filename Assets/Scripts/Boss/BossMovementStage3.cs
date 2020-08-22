@@ -172,7 +172,7 @@ public class BossMovementStage3 : MonoBehaviour
         
         
 
-        Index = (Random.Range(0, players.Length) - 1);
+        Index = (Random.Range(0, 3));
 
         Target = players[Index];
 

@@ -15,6 +15,7 @@ public class BossEntrance : MonoBehaviour
         if (GetComponent<BossStages>().Stage == 0)
         {
             gameObject.transform.position = new Vector3(70, 0, 50);
+            
         }
     }
 
@@ -33,7 +34,8 @@ public class BossEntrance : MonoBehaviour
                 if(gameObject.transform.position.x < -55)
                 {
 
-                    gameObject.transform.position = new Vector3(-30, 0, 10);
+                    gameObject.transform.position = new Vector3(-40, 0, 10);
+                    gameObject.transform.rotation = Quaternion.Euler(0, 180, 0);
                     Estage = 2;
                 }
 
@@ -42,12 +44,13 @@ public class BossEntrance : MonoBehaviour
             if(Estage == 2)
             {
 
-                transform.position += Time.deltaTime * 35.0f * gameObject.transform.right;
+                transform.position += Time.deltaTime * 35.0f * -gameObject.transform.right;
 
                 if (gameObject.transform.position.x > 35)
                 {
 
-                    gameObject.transform.position = new Vector3(40, 0, 20);
+                    gameObject.transform.position = new Vector3(48, 0, 20);
+                    gameObject.transform.rotation = Quaternion.Euler(0, 0, 0);
                     Estage = 3;
                 }
 
