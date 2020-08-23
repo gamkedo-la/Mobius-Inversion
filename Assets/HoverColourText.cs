@@ -14,19 +14,25 @@ public class HoverColourText : MonoBehaviour
     [SerializeField] private AudioClip   UIbeep;
     [SerializeField] private AudioClip   UIclick;
     [SerializeField] private GameObject  marker;
+
+    [SerializeField] private GameObject  background;
     public void onHover()
     {
         TextMeshProUGUI textmeshPro = textcolour.GetComponent<TextMeshProUGUI>();
         textmeshPro.color = new Color32(255, 214, 53, 255);
+        textmeshPro.fontSize = 64f;
         UIaudiosource.PlayOneShot(UIbeep, 0.5f);
-        marker.SetActive(true);
+       // marker.SetActive(true);
+        background.SetActive(true);
     }
 
     public void onExit()
     {
         TextMeshProUGUI textmeshPro = textcolour.GetComponent<TextMeshProUGUI>();
         textmeshPro.color = new Color32(255, 91, 24, 255);
-         marker.SetActive(false);
+        // marker.SetActive(false);
+         textmeshPro.fontSize = 60f;
+         background.SetActive(false);
     }
 
   
