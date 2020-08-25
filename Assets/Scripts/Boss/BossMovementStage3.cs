@@ -47,7 +47,7 @@ public class BossMovementStage3 : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        EndPosition = gameObject.transform.position;
+        EndPosition = new Vector3(16.5f, 0, 20);
         SelectTarget();
 
         specialAttackTimerReset = specialAttackTimer;

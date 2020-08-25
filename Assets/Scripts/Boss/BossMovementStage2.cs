@@ -30,7 +30,7 @@ public class BossMovementStage2 : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Target = gameObject.transform.position;
+        Target = new Vector3(16.5f, 0, 20);
 
         Destination();
 
