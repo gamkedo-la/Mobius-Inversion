@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 3790873812873020982}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.3, y: 1.3, z: 1.3}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -98,6 +98,8 @@ MonoBehaviour:
   BlueS: {r: 0, g: 0.277, b: 1, a: 0.32941177}
   GreenS: {r: 0, g: 0.759, b: 0, a: 0.32941177}
   PurpleS: {r: 0.617, g: 0, b: 0.83, a: 0.32941177}
+  timer: 5
+  reset: 5
 --- !u!58 &2425411805703215706
 CircleCollider2D:
   m_ObjectHideFlags: 0

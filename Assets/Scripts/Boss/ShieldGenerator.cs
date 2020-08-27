@@ -24,12 +24,12 @@ public class ShieldGenerator : MonoBehaviour
 
         if (GameObject.Find("Boss").GetComponent<BossStages>().Stage == stage)
         {
-            Timer -= Time.deltaTime;
+            
 
             if (Timer <= 0)
             {
                 Generate();
-                Timer = Reset;
+                Timer = 1;
 
             }
         }
