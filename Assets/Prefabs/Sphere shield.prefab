@@ -100,6 +100,9 @@ MonoBehaviour:
   PurpleS: {r: 0.617, g: 0, b: 0.83, a: 0.32941177}
   timer: 5
   reset: 5
+  hitAudio: {fileID: 0}
+  deflectClip: {fileID: 8300000, guid: b1a2c19b6fdd69140be33fbe2d1f097d, type: 3}
+  hitVolume: 0.5
 --- !u!58 &2425411805703215706
 CircleCollider2D:
   m_ObjectHideFlags: 0

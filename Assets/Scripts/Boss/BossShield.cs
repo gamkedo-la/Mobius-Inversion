@@ -15,9 +15,20 @@ public class BossShield : MonoBehaviour
     public float timer = 5.0f;
     public float reset = 5.0f;
 
+
+
+    public AudioSource hitAudio;
+    
+    public AudioClip deflectClip;
+    public float hitVolume = 0.5f;
+
     // Start is called before the first frame update
     void Start()
     {
+
+
+        hitAudio = GameObject.Find("Boss").GetComponent<AudioSource>();
+
 
         PassThrough = (ShipColor)Random.Range(0, 4);
 
@@ -85,6 +96,9 @@ public class BossShield : MonoBehaviour
         {
             
             Destroy(collision.gameObject);
+
+            hitAudio.PlayOneShot(deflectClip, hitVolume * Random.Range(0.5f, 1.5f));
+
         }
     }
 

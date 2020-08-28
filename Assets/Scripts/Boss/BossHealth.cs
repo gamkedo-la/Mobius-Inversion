@@ -8,7 +8,13 @@ public class BossHealth : MonoBehaviour
     public int HitPoints = 100;
 
     public int Stage;
-    
+
+
+    public AudioSource hitAudio;
+    public AudioClip hitClip;
+    public AudioClip deflectClip;
+    public float hitVolume = 0.5f;
+
 
     // Start is called before the first frame update
     void Start()
@@ -35,7 +41,20 @@ public class BossHealth : MonoBehaviour
             if (GameObject.Find("Boss").GetComponent<BossStages>().Stage == Stage)
             {
                 HitPoints -= 10;
+
+                hitAudio.PlayOneShot(hitClip, hitVolume * Random.Range(0.5f, 1.5f));
+
             }
+            else
+            {
+
+                hitAudio.PlayOneShot(deflectClip, hitVolume * Random.Range(0.5f, 1.5f));
+
+
+            }
+
+
+
             Destroy(other.gameObject);
 
             if(HitPoints <= 0)
