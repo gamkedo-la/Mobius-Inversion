@@ -31,7 +31,7 @@ public class HealingZone : MonoBehaviour
                 float dist = Vector2.Distance(transform.position, shipList[i].transform.position);
                 if(dist < healingZoneRadius)
                 {
-                    Debug.Log("Healing Ship" + shipList[i].name);               
+                    //Debug.Log("Healing Ship" + shipList[i].name);               
                 }
             }
         }
