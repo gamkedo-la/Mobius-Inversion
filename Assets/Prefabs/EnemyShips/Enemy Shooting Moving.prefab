@@ -149,6 +149,7 @@ MonoBehaviour:
   shotAudio: {fileID: 7992793635664333069}
   shotClip: {fileID: 8300000, guid: f6ebb04f7f6db9e48b3389bf7a3bd539, type: 3}
   shotVolume: 0.1
+  shootRate: 2
 --- !u!82 &7992793635664333069
 AudioSource:
   m_ObjectHideFlags: 0

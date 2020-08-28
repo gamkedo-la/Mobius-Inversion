@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class EnemyShot : MonoBehaviour
 {
+    public float bulletSpeed = 10.0f;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,7 +15,7 @@ public class EnemyShot : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position += Time.deltaTime * 20.0f * -gameObject.transform.right;
+        transform.position += Time.deltaTime * bulletSpeed * -gameObject.transform.right;
     }
 
     void OnCollisionEnter2D(Collision2D collision)
