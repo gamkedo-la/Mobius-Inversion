@@ -5,17 +5,19 @@ using UnityEngine;
 public class PlayerShot : MonoBehaviour
 { 
     public ShipColor FiredFrom;
+    public float bulletSpeed = 10.0f;
+    public float bulletTime = 4.0f;
 
     // Start is called before the first frame update
     void Start()
     {
-        Destroy(gameObject, 2.5f);   
+        Destroy(gameObject, bulletTime);   
     }
 
     // Update is called once per frame
     void Update()
     {
-        transform.position += Time.deltaTime * 20.0f * Vector3.right;
+        transform.position += Time.deltaTime * bulletSpeed * Vector3.right;
     }
 
     void OnCollisionEnter2D(Collision2D collision)
