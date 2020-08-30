@@ -17,6 +17,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MainScene.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 1
+    path: Assets/Scenes/AsteroidLevel_Andy.unity
+    guid: f4fa74500683eef41b51def32a3de1e8
   - enabled: 0
     path: Assets/Scenes/Testscene_explosion_Andy.unity
     guid: f577227943ffef643bcd21f334a4bc8c
