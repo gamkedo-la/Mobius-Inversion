@@ -13,23 +13,16 @@ public class StatsManager : MonoBehaviour
     private void Awake()
     {
         PlayerDestroy.StatsOnPlayerDestroyEnemy += IncrementStatPlayerDestroyEnemy;
+        PlayerControl.StatsOnPlayerDeath += IncrementStatPlayerDeaths;
     }
 
-    private void Start()
+    private void IncrementStatPlayerDeaths(PlayerControl playerControl)
     {
-        DisplayStats();
+        playerDeaths++;
+        Debug.Log(playerControl.thisShip + " ship suffered critical damage");
     }
 
-    private void Update()
-    {
-        
-    }
-
-    private void DisplayStats()
-    {
-        
-    }
-    public void IncrementStatPlayerDestroyEnemy(PlayerShot playerShot, int value)
+    private void IncrementStatPlayerDestroyEnemy(PlayerShot playerShot, int value)
     {
         enemyKillScore += value;
         Debug.Log(playerShot.FiredFrom.ToString() + " scored a kill");

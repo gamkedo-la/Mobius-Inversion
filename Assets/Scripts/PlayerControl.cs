@@ -36,6 +36,8 @@ public class PlayerControl : MonoBehaviour
     public AudioClip   shotClip;
     public float shotVolume=0.5f;
 
+    public static event Action<PlayerControl> StatsOnPlayerDeath;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -108,6 +110,7 @@ public class PlayerControl : MonoBehaviour
 
         if (isDead) //handling newly dead
         {
+            StatsOnPlayerDeath(this);
             //Debug.Log("Turn off stuff");
             myRend.enabled = false;
             playerBody.SetActive(false);
