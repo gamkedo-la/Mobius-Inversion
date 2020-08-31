@@ -1,13 +1,19 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class StatsManager : MonoBehaviour
 {
-    public int enemyKills = 0;
+    public int enemyKillScore = 0;
     public int playerDeaths = 0;
     public int damageDealt = 0;
     public int damageTaken = 0;
+
+    private void Awake()
+    {
+        PlayerDestroy.StatsOnPlayerDestroyEnemy += IncrementStatPlayerDestroyEnemy;
+    }
 
     private void Start()
     {
@@ -23,8 +29,9 @@ public class StatsManager : MonoBehaviour
     {
         
     }
-    public void IncrementStat(int statistic, int value)
+    public void IncrementStatPlayerDestroyEnemy(PlayerShot playerShot, int value)
     {
-        statistic += value;
+        enemyKillScore += value;
+        Debug.Log(playerShot.FiredFrom.ToString() + " scored a kill");
     }
 }

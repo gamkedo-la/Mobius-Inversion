@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -34,7 +35,6 @@ public class PlayerControl : MonoBehaviour
     public AudioSource shotAudio;
     public AudioClip   shotClip;
     public float shotVolume=0.5f;
-
 
     // Start is called before the first frame update
     void Start()
@@ -137,7 +137,7 @@ public class PlayerControl : MonoBehaviour
             shotGO.GetComponent<PlayerShot>().FiredFrom = thisShip;
 
             yield return new WaitForSeconds(rateOfFire);
-            shotAudio.PlayOneShot(shotClip, shotVolume*Random.Range(0.5f,1.5f));
+            shotAudio.PlayOneShot(shotClip, shotVolume * UnityEngine.Random.Range(0.5f, 1.5f));
         }
     }
 }
