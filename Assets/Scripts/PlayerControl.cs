@@ -60,7 +60,7 @@ public class PlayerControl : MonoBehaviour
             return;
         }
 
-        //if (activeShip == thisShip)
+        if (activeShip == thisShip)
         {
 
             transform.position += Vector3.up * Input.GetAxis("Vertical") * vertSpeed * Time.deltaTime +
@@ -73,10 +73,10 @@ public class PlayerControl : MonoBehaviour
             GameObject shotGO = GameObject.Instantiate(shotPrefab, transform.position, Quaternion.identity);
         }*/
 
-        /*if (Input.GetKeyDown(KeyCode.Alpha1)) { activeShip = ShipColor.Green; }
+        if (Input.GetKeyDown(KeyCode.Alpha1)) { activeShip = ShipColor.Green; }
         if (Input.GetKeyDown(KeyCode.Alpha2)) { activeShip = ShipColor.Yellow; }
         if (Input.GetKeyDown(KeyCode.Alpha3)) { activeShip = ShipColor.Red; }
-        if (Input.GetKeyDown(KeyCode.Alpha4)) { activeShip = ShipColor.Purple; }*/
+        if (Input.GetKeyDown(KeyCode.Alpha4)) { activeShip = ShipColor.Purple; }
 
 
         if (Input.GetButtonUp("Pause")) 

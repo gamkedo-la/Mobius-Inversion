@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 7992793635664333069}
   m_Layer: 10
   m_Name: Enemy Shooting Moving
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -72,6 +72,7 @@ MonoBehaviour:
   shotAudio: {fileID: 7992793635664333069}
   shotClip: {fileID: 8300000, guid: e500d6d83420aaf439bd0eb9f9d0d0f8, type: 3}
   shotVolume: 1.5
+  scoreValue: 100
 --- !u!114 &6532985535111255223
 MonoBehaviour:
   m_ObjectHideFlags: 0

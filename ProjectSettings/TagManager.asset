@@ -10,6 +10,7 @@ TagManager:
   - Rumble
   - BackgroundMusic
   - HealingZone
+  - Enemy
   layers:
   - Default
   - TransparentFX
