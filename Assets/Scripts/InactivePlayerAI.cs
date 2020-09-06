@@ -17,6 +17,7 @@ public class InactivePlayerAI : MonoBehaviour
 
     GameObject temp;
 
+    Vector3 dest;
 
     // Start is called before the first frame update
     void Start()
@@ -81,11 +82,11 @@ public class InactivePlayerAI : MonoBehaviour
 
             if (Target != null)
             {
-                Vector3 dest = new Vector3(gameObject.transform.position.x, Target.transform.position.y, 20);
+                dest = new Vector3(gameObject.transform.position.x, Target.transform.position.y, 20);
             }
             else
             {
-                Vector3 dest = new Vector3(gameObject.transform.position.x, (gameObject.transform.position.y + Random.Range(-3,3)), 20);
+                dest = new Vector3(gameObject.transform.position.x, (gameObject.transform.position.y + Random.Range(-3,3)), 20);
 
             }
 
