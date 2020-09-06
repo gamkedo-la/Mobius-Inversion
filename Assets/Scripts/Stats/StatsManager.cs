@@ -43,9 +43,9 @@ public class StatsManager : MonoBehaviour
         totalNumberOfEnemies = GameObject.FindGameObjectsWithTag("Enemy").Length;
         // Test values
         //totalNumberOfEnemies = 100;
-        //enemiesKilled = 100;
+        //enemiesKilled = 23;
         //overallScore = 10000;
-        //playerDeaths = 100;
+        //playerDeaths = 0;
         //ShowStatsScreen();
     }
 
@@ -54,6 +54,8 @@ public class StatsManager : MonoBehaviour
         playerDeaths++;
         Debug.Log(playerControl.thisShip + " ship suffered critical damage");
         overallScore -= playerDeathPenaltyValue;
+        ShowOverallScore();
+        StartEnemiesKilledSlider();
         CalculateRating();
     }
 
@@ -63,6 +65,8 @@ public class StatsManager : MonoBehaviour
         enemyKillScore += value;
         Debug.Log(playerShot.FiredFrom.ToString() + " scored a kill");
         overallScore += value;
+        ShowOverallScore();
+        StartEnemiesKilledSlider();
         CalculateRating();
     }
 
@@ -72,23 +76,52 @@ public class StatsManager : MonoBehaviour
         StartCoroutine(StatsScreenRoutine());
     }
 
+    public void HideStatsScreen()
+    {
+        StartCoroutine(FadeOutStatsScreen());
+    }
+
+    public void ToggleStatsScreen()
+    {
+        Toggle toggle = GetComponentInChildren<Toggle>();
+        if (toggle.isOn)
+        {
+            ShowStatsScreen();
+        }
+        else
+        {
+            HideStatsScreen();
+        }
+    }
+
     IEnumerator StatsScreenRoutine()
     {
-        yield return FadeStatsScreen();
+        StartCoroutine(FadeInStatsScreen());
         yield return new WaitForSeconds(3);
         ShowOverallScore();
         StartEnemiesKilledSlider();
-        yield return new WaitForSeconds(3);
-        StartCoroutine(ShowBonuses());
         CalculateRating();
+
+        // If end of game then add bonuses
+        //StartCoroutine(ShowBonuses());
     }
 
-    IEnumerator FadeStatsScreen()
+    IEnumerator FadeInStatsScreen()
     {
         // Fade
         fadeAnimator.SetTrigger("FadeTrigger");
         yield return new WaitForSeconds(fadeTime);
         statsObjects.GetComponent<CanvasGroup>().alpha = 1;
+        // Unfade
+        fadeAnimator.SetTrigger("FadeTrigger");
+    }
+
+    IEnumerator FadeOutStatsScreen()
+    {
+        // Fade
+        fadeAnimator.SetTrigger("FadeTrigger");
+        yield return new WaitForSeconds(fadeTime);
+        statsObjects.GetComponent<CanvasGroup>().alpha = 0;
         // Unfade
         fadeAnimator.SetTrigger("FadeTrigger");
     }
@@ -103,10 +136,11 @@ public class StatsManager : MonoBehaviour
     private void StartEnemiesKilledSlider()
     {
         //Debug.Log("StartEnemiesKilledSlider");
-        float sliderTarget = enemiesKilled / totalNumberOfEnemies;
+        float sliderTarget = enemiesKilled;
+        sliderTarget /= totalNumberOfEnemies;
+
         enemiesKilledSliderUI.targetValue = sliderTarget;
-        enemiesKilledSliderUI.StartSlider();
-        
+        enemiesKilledSliderUI.StartSlider();        
     }
     IEnumerator ShowBonuses()
     {
@@ -122,7 +156,6 @@ public class StatsManager : MonoBehaviour
         {
             allEnemiesKilled.SetActive(true);
         }
-
     }
     private void CalculateRating()
     {
