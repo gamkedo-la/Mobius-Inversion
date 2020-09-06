@@ -2,18 +2,22 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class StatsSlider : MonoBehaviour
 {
-    private float targetValue = 0.75f;
+    public float targetValue = 0.75f;
     private float sliderStopSpeed = 0.0025f;
-    private bool sliderActive = true;
+    private bool sliderActive = false;
     private Slider elimSlider;
+    private TMP_Text sliderText;
     private float fillSpeed = 0.0f;
 
-    private void Start()
+    private void Awake()
     {
         elimSlider = GetComponent<Slider>();
+        sliderText = GetComponentInChildren<TMP_Text>();
+        sliderActive = false;
     }
 
     private void FixedUpdate()
@@ -24,7 +28,7 @@ public class StatsSlider : MonoBehaviour
         }
     }
 
-    private void StartSlider()
+    public void StartSlider()
     {
         sliderActive = true;
     }
@@ -35,6 +39,7 @@ public class StatsSlider : MonoBehaviour
         {
             fillSpeed = targetValue - elimSlider.value; // Decelerate slider
             elimSlider.value += fillSpeed * Time.deltaTime;
+            sliderText.text = (Mathf.Round(elimSlider.value * 100).ToString() + "%");
 
             // Stop slider once it has decelerated to stopping speed
             if (fillSpeed <= sliderStopSpeed)
