@@ -9,6 +9,7 @@ public class BossStages : MonoBehaviour
     public GameObject BottomArm;
     public GameObject Body;
     public GameObject Core;
+    public StatsManager endScreen;
 
     public int Stage;
 
@@ -107,7 +108,7 @@ public class BossStages : MonoBehaviour
         {
 
             //the boss is dead, any on death triggers go here
-
+            endScreen.ShowStatsScreen();
 
 
         }

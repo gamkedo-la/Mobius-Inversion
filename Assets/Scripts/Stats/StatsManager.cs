@@ -72,6 +72,13 @@ public class StatsManager : MonoBehaviour
 
     public void ShowStatsScreen()
     {      
+        if(didOpen)
+        {
+            return;
+        }
+
+        didOpen = true;
+
         // Fade and show stats screen
         StartCoroutine(StatsScreenRoutine());
     }
@@ -93,6 +100,8 @@ public class StatsManager : MonoBehaviour
             HideStatsScreen();
         }
     }
+
+    private bool didOpen = false;
 
     IEnumerator StatsScreenRoutine()
     {
