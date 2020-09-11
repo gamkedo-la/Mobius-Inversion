@@ -13,8 +13,8 @@ public class BossHealth : MonoBehaviour
     public AudioSource hitAudio;
     public AudioClip hitClip;
     public AudioClip deflectClip;
-    public float hitVolume = 0.5f;
-
+    //public float hitVolume = 0.5f;
+    public float hitVolume = 1.0f;
 
     // Start is called before the first frame update
     void Start()
@@ -33,7 +33,8 @@ public class BossHealth : MonoBehaviour
     {
         HitPoints -= 10;
         Debug.Log("Damaging Boss");
-        hitAudio.PlayOneShot(hitClip, hitVolume * Random.Range(0.5f, 1.5f));
+        //hitAudio.PlayOneShot(hitClip, hitVolume * Random.Range(0.5f, 1.5f));
+        hitAudio.PlayOneShot(hitClip, hitVolume);
 
         if (HitPoints <= 0)
         {
@@ -63,8 +64,6 @@ public class BossHealth : MonoBehaviour
             {
 
                 hitAudio.PlayOneShot(deflectClip, hitVolume * Random.Range(0.5f, 1.5f));
-
-
             }
 
 
