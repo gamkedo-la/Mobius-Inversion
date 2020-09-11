@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class ReturnToScene : MonoBehaviour
 {
 
-    public void unloadCredits() {
+    public void backToTitle() {
         Time.timeScale = 1;
         SceneManager.LoadScene("StartScreen_Andy");
     }
