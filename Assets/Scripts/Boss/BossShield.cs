@@ -13,7 +13,7 @@ public class BossShield : MonoBehaviour
     public Color PurpleS;
 
     public float timer = 5.0f;
-    public float reset = 5.0f;
+    private float reset = 5.0f;
 
 
 
@@ -91,14 +91,28 @@ public class BossShield : MonoBehaviour
     }
 
     void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.GetComponent<PlayerShot>().FiredFrom != PassThrough)
+    {;
+        if (collision.gameObject.layer == LayerMask.NameToLayer("PlayerBullets"))
         {
-            
-            Destroy(collision.gameObject);
+            PlayerShot PS = collision.gameObject.GetComponent<PlayerShot>();
+            Debug.Log(PS.FiredFrom + " " + PassThrough);
 
-            hitAudio.PlayOneShot(deflectClip, hitVolume * Random.Range(0.5f, 1.5f));
+            if (PS!= null && PS.FiredFrom != PassThrough)
+            {
+                Debug.Log("Blocked");
+                Destroy(collision.gameObject);
+               
+                hitAudio.PlayOneShot(deflectClip, hitVolume * Random.Range(0.5f, 1.5f));
 
+            }
+            else
+            {
+                BossHealth BH = transform.GetComponentInParent<BossHealth>();
+                if(BH)
+                {
+                    BH.TakeDamage();
+                }
+            }
         }
     }
 

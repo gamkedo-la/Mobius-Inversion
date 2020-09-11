@@ -52,7 +52,30 @@ public class BossStages : MonoBehaviour
             Stage = 4;
         }
 
+        if (Input.GetKeyDown(KeyCode.G))
+        {
+            Stage++;
+            if (Stage > 4)
+            {
+                Stage = 4;
+            }
 
+            switch (Stage)
+            {
+                case 2:
+                    Destroy(TopArm);
+                    Destroy(BottomArm);
+                    break;
+
+                case 3:
+                    Destroy(Body);
+                    break;
+
+                case 4:
+                    Destroy(Core);
+                    break;
+            }
+        }
 
         //additional behaviors go here, stage one movement is currently handled in BossSimpleMovement 
         //Attack patterns are planned to be handled in additional scripts
@@ -84,6 +107,7 @@ public class BossStages : MonoBehaviour
         {
 
             //the boss is dead, any on death triggers go here
+
 
 
         }

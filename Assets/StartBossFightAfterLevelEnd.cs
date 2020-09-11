@@ -6,6 +6,7 @@ public class StartBossFightAfterLevelEnd : MonoBehaviour
 {
     public GameObject bossToWake;
     public ScrollWorld scrollToStop;
+    public ScrollWorld bonusScrollToStop;
 
     // Update is called once per frame
     public void WakeBoss()
@@ -14,6 +15,7 @@ public class StartBossFightAfterLevelEnd : MonoBehaviour
         {
             bossToWake.SetActive(true);
             scrollToStop.enabled = false;
+            bonusScrollToStop.enabled = false;
 
             for(int i = 0; i < transform.childCount; i++)
             {

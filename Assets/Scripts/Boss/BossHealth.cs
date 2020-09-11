@@ -29,6 +29,23 @@ public class BossHealth : MonoBehaviour
         
     }
 
+    public void TakeDamage()
+    {
+        HitPoints -= 10;
+        Debug.Log("Damaging Boss");
+        hitAudio.PlayOneShot(hitClip, hitVolume * Random.Range(0.5f, 1.5f));
+
+        if (HitPoints <= 0)
+        {
+
+            Destroy(gameObject);
+
+        }
+    }
+
+
+   
+
     void OnCollisionEnter2D(Collision2D other)
     {
 
@@ -40,10 +57,7 @@ public class BossHealth : MonoBehaviour
 
             if (GameObject.Find("Boss").GetComponent<BossStages>().Stage == Stage)
             {
-                HitPoints -= 10;
-
-                hitAudio.PlayOneShot(hitClip, hitVolume * Random.Range(0.5f, 1.5f));
-
+                TakeDamage();
             }
             else
             {
@@ -57,12 +71,7 @@ public class BossHealth : MonoBehaviour
 
             Destroy(other.gameObject);
 
-            if(HitPoints <= 0)
-            {
-
-                Destroy(gameObject);
-
-            }
+           
 
         }
 

@@ -9,7 +9,7 @@ public class StartBoss : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (transform.position.x < Bounds.instance.rightX)
+        if (transform.position.x < Bounds.instance.rightX || Input.GetKeyDown(KeyCode.F))
         {
             sBALE.WakeBoss();
             this.enabled = false;
