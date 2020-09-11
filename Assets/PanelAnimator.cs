@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PanelAnimator : MonoBehaviour
 {
@@ -9,7 +10,8 @@ public class PanelAnimator : MonoBehaviour
 
     public void ShowLevelSelectPanel()
     {
-        StartCoroutine(PanelAnimation());
+        // StartCoroutine(PanelAnimation());
+        SceneManager.LoadScene("MainScene");
     }
 
     private IEnumerator PanelAnimation()

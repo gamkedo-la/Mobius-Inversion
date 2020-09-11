@@ -26,4 +26,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Shader test scene_Andy.unity
     guid: 248d63749db737c41b8f0dd8d1cbb65f
+  - enabled: 1
+    path: Assets/Scenes/CreditsScene_Chris.unity
+    guid: fd131a5b1a98947499c7baf964cafd16
   m_configObjects: {}

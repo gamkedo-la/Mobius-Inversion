@@ -6,8 +6,13 @@ using UnityEngine.SceneManagement;
 
 public class ReturnToScene : MonoBehaviour
 {
-   
-   public void unloadOptions ()
+
+    public void unloadCredits() {
+        Time.timeScale = 1;
+        SceneManager.LoadScene("StartScreen_Andy");
+    }
+
+    public void unloadOptions ()
         {
              Time.timeScale = 1;
              SceneManager.UnloadSceneAsync("OptionsScene_Andy");
