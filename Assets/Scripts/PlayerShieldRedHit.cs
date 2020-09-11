@@ -19,12 +19,19 @@ public class PlayerShieldRedHit : MonoBehaviour
     void OnCollisionEnter2D(Collision2D other)
     {
         if (other.gameObject.layer == LayerMask.NameToLayer("EnemyBullets"))
-        {
-            Debug.Log(other.gameObject.name);
-            //Instantiate(enemyExplosion, other.transform.position, transform.rotation);
-            //decaytime = 3f;
+        {        
             Vector3 shieldhit = other.gameObject.transform.position; 
             shieldhit.z = other.transform.position.z + Random.Range(-2.0f,1.0f); 
+            shieldRaycast.SetHitPosition(shieldhit, decaytime);
+            Destroy(other.gameObject);
+        }
+    }
+    void OnCollisionExit2D(Collision2D other)
+    {
+        if (other.gameObject.layer == LayerMask.NameToLayer("PlayerBullets"))
+        {            
+            Vector3 shieldhit = other.gameObject.transform.position;
+            shieldhit.z = other.transform.position.z + Random.Range(-2.0f, 1.0f);
             shieldRaycast.SetHitPosition(shieldhit, decaytime);
             Destroy(other.gameObject);
         }
