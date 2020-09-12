@@ -140,7 +140,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &31558857
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -159,10 +159,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '<b>Mantis class </b>  - fastest firing, but lacks special abilities
+  m_text: '<color="green"><b>Mantis class </b></color>  - fastest firing, but lacks
+    special abilities
 
-    <color=#FCD434>W,A,S,D</color>
-    or <color=#FCD434>arrow keys</color> to move
+    <color=#FCD434>W,A,S,D</color> or <color=#FCD434>arrow
+    keys</color> to move
 
     Firing is automatic'
   m_isRightToLeft: 0
@@ -369,9 +370,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '<b>Dragonfly class </b> - Not all enemies are unprotected, if you see
-    enemy bosses are protected by shields make sure to match your shot colour to
-    get a hit.
+  m_text: '<color="purple"><b>Dragonfly class </b> </color>- Not all enemies are
+    unprotected, if you see enemy bosses are protected by shields make sure to match
+    your shot colour to get a hit.
 
     Having another colour option can really help!'
   m_isRightToLeft: 0
@@ -383,7 +384,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4281718015
+    rgba: 4279787519
   m_fontColor: {r: 1, g: 0.37254903, b: 0.09411766, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -419,7 +420,7 @@ MonoBehaviour:
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
-  m_firstOverflowCharacterIndex: 58
+  m_firstOverflowCharacterIndex: 63
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
   m_isTextTruncated: 0
@@ -443,9 +444,9 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 84880932}
-    characterCount: 191
+    characterCount: 196
     spriteCount: 0
-    spaceCount: 34
+    spaceCount: 35
     wordCount: 35
     linkCount: 0
     lineCount: 10
@@ -530,14 +531,14 @@ RectTransform:
   m_GameObject: {fileID: 84880931}
   m_LocalRotation: {x: 0.01745085, y: 0.008726445, z: 0.0001523129, w: 0.9998097}
   m_LocalPosition: {x: 0, y: 0, z: 21.27}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 532112192}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 2, y: 1.001, z: 0.035}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -510.35, y: -371.81}
+  m_AnchoredPosition: {x: -526, y: -361.31}
   m_SizeDelta: {x: 27.69, y: 8.85}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &176648304
@@ -1534,6 +1535,7 @@ MonoBehaviour:
   panel4: {fileID: 739046016}
   panel5: {fileID: 84880931}
   panel: {fileID: 1015266829}
+  shield: {fileID: 342160423}
 --- !u!1 &578060415
 GameObject:
   m_ObjectHideFlags: 0
@@ -1994,8 +1996,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: <b>Artemis class </b> - With all those missile flying you are going to
-    need some healing! Simply fly into the red healing zone to sort yourself out
+  m_text: <color="red"><b>Artemis class </b> </color>- With all those missile flying
+    you are going to need some healing! Simply fly into the red healing zone to sort
+    yourself out
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: db558fec6c9e8d74d9f441c26bffc0b7, type: 2}
   m_sharedMaterial: {fileID: 6025169836974605304, guid: db558fec6c9e8d74d9f441c26bffc0b7,
@@ -2152,14 +2155,14 @@ RectTransform:
   m_GameObject: {fileID: 739046016}
   m_LocalRotation: {x: 0.01745085, y: 0.008726445, z: 0.0001523129, w: 0.9998097}
   m_LocalPosition: {x: 0, y: 0, z: 21.63}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 532112192}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 2, y: 1.001, z: 0.035}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -510.81, y: -361.69}
+  m_AnchoredPosition: {x: -525.71, y: -363.72}
   m_SizeDelta: {x: 27.69, y: 8.85}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &810084283
@@ -2399,7 +2402,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1015266830
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2784,7 +2787,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1132794255
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2803,11 +2806,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '<b>Palladium class </b>  - Protection for itself and others
+  m_text: '<color="blue"><b>Palladium class </b> </color> - Protection for itself
+    and others
 
-    Press
-    <color=#FCD434>E</color> to activate, but make sure your really need it as it
-    won''t last forever'
+    Press <color=#FCD434>E</color> to activate, but make sure your
+    really need it as it won''t last forever'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: db558fec6c9e8d74d9f441c26bffc0b7, type: 2}
   m_sharedMaterial: {fileID: 6025169836974605304, guid: db558fec6c9e8d74d9f441c26bffc0b7,
@@ -2964,7 +2967,7 @@ RectTransform:
   m_GameObject: {fileID: 1132794254}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 21.91}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 532112192}
   m_RootOrder: 3

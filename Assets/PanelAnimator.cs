@@ -21,6 +21,7 @@ public class PanelAnimator : MonoBehaviour
       public GameObject panel;
 
       private bool shipinfo=false;
+      public GameObject shield;
 
     /* public void ShowLevelSelectPanel()
     {
@@ -31,6 +32,16 @@ public class PanelAnimator : MonoBehaviour
 
     void Update()
     {
+        if (Input.GetKey(KeyCode.E))
+            {
+                shield.SetActive(true);
+            }
+            else
+            {
+                shield.SetActive(false);
+            }
+                
+        
         if (shipinfo == true)
         {
             if(Input.anyKey)
