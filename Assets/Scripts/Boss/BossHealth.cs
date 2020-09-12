@@ -15,6 +15,8 @@ public class BossHealth : MonoBehaviour
     public AudioClip deflectClip;
     //public float hitVolume = 0.5f;
     public float hitVolume = 1.0f;
+    public GameObject bulletExplosion;
+
 
     // Start is called before the first frame update
     void Start()
@@ -35,11 +37,10 @@ public class BossHealth : MonoBehaviour
         Debug.Log("Damaging Boss");
         //hitAudio.PlayOneShot(hitClip, hitVolume * Random.Range(0.5f, 1.5f));
         hitAudio.PlayOneShot(hitClip, hitVolume);
-
         if (HitPoints <= 0)
         {
 
-            Destroy(gameObject);
+            Destroy(gameObject, 1);
 
         }
     }
@@ -58,6 +59,7 @@ public class BossHealth : MonoBehaviour
 
             if (GameObject.Find("Boss").GetComponent<BossStages>().Stage == Stage)
             {
+                Instantiate(bulletExplosion, other.transform.position, transform.rotation);
                 TakeDamage();
             }
             else
