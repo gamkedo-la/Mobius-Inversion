@@ -60,7 +60,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 66e79d562a352d848b630413342c0801, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -94,10 +94,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PassThrough: 0
-  RedS: {r: 1, g: 0, b: 0, a: 0.32941177}
-  BlueS: {r: 0, g: 0.277, b: 1, a: 0.32941177}
-  GreenS: {r: 0, g: 0.759, b: 0, a: 0.32941177}
-  PurpleS: {r: 0.617, g: 0, b: 0.83, a: 0.32941177}
+  RedS: {r: 1, g: 0, b: 0, a: 0.54509807}
+  BlueS: {r: 0, g: 0.277, b: 1, a: 0.5529412}
+  GreenS: {r: 0, g: 0.759, b: 0, a: 0.5882353}
+  PurpleS: {r: 0.617, g: 0, b: 0.83, a: 0.5372549}
   timer: 5
   hitAudio: {fileID: 0}
   deflectClip: {fileID: 8300000, guid: b1a2c19b6fdd69140be33fbe2d1f097d, type: 3}
