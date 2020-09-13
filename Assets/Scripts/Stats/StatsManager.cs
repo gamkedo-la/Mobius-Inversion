@@ -63,7 +63,7 @@ public class StatsManager : MonoBehaviour
     {
         enemiesKilled++;
         enemyKillScore += value;
-        Debug.Log(playerShot.FiredFrom.ToString() + " scored a kill");
+        //Debug.Log(playerShot.FiredFrom.ToString() + " scored a kill");
         overallScore += value;
         ShowOverallScore();
         StartEnemiesKilledSlider();

@@ -14,10 +14,13 @@ public class PlayerHealth : MonoBehaviour
     //public float shieldTimeUp = 1.0f;
     //private float shieldLastTime = 4.0f;
     private PlayerShieldRedHit shield;
+    private HealingZone healingzone;
     public int shieldMaxHealth;
     public int shieldCurrentHealth;
     public float shieldRegen;
     public GameObject gameObjectShield;
+
+    public GameObject gameObjectHeal;
 
 
     // Start is called before the first frame update
@@ -25,6 +28,7 @@ public class PlayerHealth : MonoBehaviour
     {
         pcScript = GetComponent<PlayerControl>();
         shield = GetComponentInChildren<PlayerShieldRedHit>();
+        healingzone = GetComponentInChildren<HealingZone>();
         currentHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
         //gameObjectShield = GameObject.Find("/Players&UI/PlayerShipBlue/PlayerShield");
@@ -32,6 +36,10 @@ public class PlayerHealth : MonoBehaviour
         if (shield)
         {
             shield.gameObject.SetActive(false);
+        }
+        if (healingzone)
+        {
+            healingzone.gameObject.SetActive(false);
         }
     }
 
@@ -47,6 +55,18 @@ public class PlayerHealth : MonoBehaviour
             else
             {
                 shield.gameObject.SetActive(false);
+            }
+        }
+
+        if (healingzone)
+        {
+            if(Input.GetKey(KeyCode.Q))
+            {
+                healingzone.gameObject.SetActive(true);
+            }
+            else
+            {
+                healingzone.gameObject.SetActive(false);
             }
         }
 
@@ -83,6 +103,12 @@ public class PlayerHealth : MonoBehaviour
             Destroy(other.gameObject);
         }
 
+    }
+
+    void Heal(int heal)
+    {
+        currentHealth += heal;
+        healthBar.SetHealth(currentHealth);
     }
 
     void TakeDamage(int damage)

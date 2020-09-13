@@ -27,7 +27,7 @@ public class EnemyShot : MonoBehaviour
 
             Destroy(collision.gameObject);
 
-            Debug.Log("Bullets Mutually Annillated, TO DO: ADD EXPLOSION VFX");
+            //Debug.Log("Bullets Mutually Annillated, TO DO: ADD EXPLOSION VFX");
         }
     }
 }

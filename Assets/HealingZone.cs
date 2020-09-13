@@ -6,14 +6,16 @@ public class HealingZone : MonoBehaviour
 {
     public GameObject[] shipList;
     public GameObject healingZone;
-    public float healingZoneRadius = 3.25f;
+    public float healingZoneRadius = 4.0f;
     private float previousHealingZoneRadius;
+    public PlayerHealth playerHealthScript;
 
     // Start is called before the first frame update
     void Start()
     {
         shipList = GameObject.FindGameObjectsWithTag("Player");
         healingZone = GameObject.FindGameObjectWithTag("HealingZone");
+        
     }
 
     // Update is called once per frame
@@ -31,7 +33,8 @@ public class HealingZone : MonoBehaviour
                 float dist = Vector2.Distance(transform.position, shipList[i].transform.position);
                 if(dist < healingZoneRadius)
                 {
-                    //Debug.Log("Healing Ship" + shipList[i].name);               
+                    Debug.Log("Healing Ship " + shipList[i].name);          
+                    
                 }
             }
         }

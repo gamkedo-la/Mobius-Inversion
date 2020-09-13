@@ -10,6 +10,6 @@ public class FogSwitch : MonoBehaviour
     {
         RenderSettings.fog = FogOn;
 
-        Debug.Log("Fog Enabled by Script " + (RenderSettings.fog ? "There is Fog " : "There is not Fog"));
+        //Debug.Log("Fog Enabled by Script " + (RenderSettings.fog ? "There is Fog " : "There is not Fog"));
     }
 }
