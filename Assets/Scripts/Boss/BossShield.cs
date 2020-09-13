@@ -46,7 +46,7 @@ public class BossShield : MonoBehaviour
         {
             gameObject.GetComponent<Renderer>().material.color = PurpleS;
         }
-        if (PassThrough == ShipColor.Yellow)
+        if (PassThrough == ShipColor.Blue)
         {
             gameObject.GetComponent<Renderer>().material.color = BlueS;
         }
@@ -79,7 +79,7 @@ public class BossShield : MonoBehaviour
             {
                 gameObject.GetComponent<Renderer>().material.color = PurpleS;
             }
-            if (PassThrough == ShipColor.Yellow)
+            if (PassThrough == ShipColor.Blue)
             {
                 gameObject.GetComponent<Renderer>().material.color = BlueS;
             }

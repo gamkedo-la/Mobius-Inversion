@@ -19,7 +19,7 @@ public class PlayerHealth : MonoBehaviour
     public int shieldCurrentHealth;
     public float shieldRegen;
     public GameObject gameObjectShield;
-    public float waitTime;
+    public float waitTime = 1.0f;
     public bool healActive;
 
     public GameObject gameObjectHeal;
@@ -35,7 +35,7 @@ public class PlayerHealth : MonoBehaviour
         pcScript = GetComponent<PlayerControl>();
         shield = GetComponentInChildren<PlayerShieldRedHit>();
         healingzone = GetComponentInChildren<HealingZone>();
-        healingParticles = GameObject.Find("/HealingParticles");
+        //healingParticles = GameObject.Find("Players&UI/PlayerShipGreen/Healing Particles");
         healActive = false;
         currentHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
@@ -52,6 +52,12 @@ public class PlayerHealth : MonoBehaviour
         if (healingzone)
         {
             healingzone.gameObject.SetActive(false);
+        }
+
+        if (lowHealthStart)
+        {
+            currentHealth = 10;
+            healthBar.SetHealth(currentHealth);
         }
     }
 
@@ -70,7 +76,7 @@ public class PlayerHealth : MonoBehaviour
             }
         }
 
-        if (healingzone)
+        /*if (healingzone)
         {
             if(Input.GetKey(KeyCode.Q))
             {
@@ -82,7 +88,7 @@ public class PlayerHealth : MonoBehaviour
                 healActive = false;
                 healingzone.gameObject.SetActive(false);
             }
-        }
+        }*/
 
         /*
         if(shield && shieldTimeUp > 0)
@@ -93,11 +99,6 @@ public class PlayerHealth : MonoBehaviour
                 shield.gameObject.SetActive(false);
             }
         }*/
-
-        if(lowHealthStart)
-        {
-            currentHealth = 10;
-        }
     }
 
     void OnCollisionEnter2D(Collision2D other)
@@ -115,6 +116,7 @@ public class PlayerHealth : MonoBehaviour
             TakeDamage(20);
             Destroy(other.gameObject);
         }
+
         if (other.gameObject.layer == LayerMask.NameToLayer("EnemyShip"))
         {
             Instantiate(enemyExplosion, transform.position, transform.rotation);
@@ -122,17 +124,16 @@ public class PlayerHealth : MonoBehaviour
             Destroy(other.gameObject);
         }
 
-        if (healActive)
+
+        if (other.gameObject.layer == LayerMask.NameToLayer("HealBubble"))
         {
-            if (other.gameObject.layer == LayerMask.NameToLayer("PlayerShip"))
+            StartCoroutine(HealDelay(waitTime));
+            if (healingParticles)
             {
-                StartCoroutine(HealDelay(waitTime));
-                if (healingParticles)
-                {
-                    healingParticles.gameObject.SetActive(true);
-                }
+                healingParticles.gameObject.SetActive(true);
             }
         }
+        
     }
 
     /*void OnCollisionStay2D(Collision2D other)
@@ -173,6 +174,7 @@ public class PlayerHealth : MonoBehaviour
     {
         while (true)
         {
+            //Debug.Log("HealingDelay");
             Heal(10);
             yield return new WaitForSeconds(waitTime);
         }

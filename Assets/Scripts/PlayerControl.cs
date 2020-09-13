@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum ShipColor { Green, Yellow, Red, Purple };
+public enum ShipColor { Green, Blue, Red, Purple };
 
 public class PlayerControl : MonoBehaviour
 {
@@ -74,7 +74,7 @@ public class PlayerControl : MonoBehaviour
         }*/
 
         if (Input.GetKeyDown(KeyCode.Alpha1)) { activeShip = ShipColor.Green; }
-        if (Input.GetKeyDown(KeyCode.Alpha2)) { activeShip = ShipColor.Yellow; }
+        if (Input.GetKeyDown(KeyCode.Alpha2)) { activeShip = ShipColor.Blue; }
         if (Input.GetKeyDown(KeyCode.Alpha3)) { activeShip = ShipColor.Red; }
         if (Input.GetKeyDown(KeyCode.Alpha4)) { activeShip = ShipColor.Purple; }
 
@@ -124,7 +124,7 @@ public class PlayerControl : MonoBehaviour
         yield return new WaitForSeconds(1.0f);
 
         isDead = false;
-        Debug.Log("Turn on stuff");
+        //Debug.Log("Turn on stuff");
         myRend.enabled = true;
         playerBody.SetActive(true);
         transform.position = startPos;
