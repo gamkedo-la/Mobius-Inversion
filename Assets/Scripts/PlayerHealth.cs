@@ -85,6 +85,12 @@ public class PlayerHealth : MonoBehaviour
 
     }
 
+    public void Heal(int heal)
+    {
+        currentHealth += heal;
+        healthBar.SetHealth(currentHealth);
+    }
+
     void TakeDamage(int damage)
     {
         currentHealth -= damage;
