@@ -125,13 +125,15 @@ public class PlayerHealth : MonoBehaviour
         }
 
 
-        if (other.gameObject.layer == LayerMask.NameToLayer("HealBubble"))
+        if (other.gameObject.layer == LayerMask.NameToLayer("PlayerShip"))
         {
-            StartCoroutine(HealDelay(waitTime));
+            Heal(10);
+            //StartCoroutine(HealDelay(waitTime));
             if (healingParticles)
             {
                 healingParticles.gameObject.SetActive(true);
             }
+            //StopCoroutine(HealDelay(waitTime));           
         }
         
     }
@@ -150,6 +152,7 @@ public class PlayerHealth : MonoBehaviour
 
     void OnCollisionExit2D(Collision2D other)
     {
+        StopCoroutine(HealDelay(waitTime));
         if (healingParticles)
         {
             healingParticles.gameObject.SetActive(false);
