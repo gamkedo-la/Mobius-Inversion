@@ -159,7 +159,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '<color="green"><b>Mantis class </b></color>  - fastest firing, but lacks
+  m_text: '<color="green"><b>Mantis class </b></color> - fastest moving, but lacks
     special abilities
 
     <color=#FCD434>W,A,S,D</color> or <color=#FCD434>arrow
@@ -370,9 +370,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '<color="purple"><b>Dragonfly class </b> </color>- Not all enemies are
-    unprotected, if you see enemy bosses are protected by shields make sure to match
-    your shot colour to get a hit.
+  m_text: '<color="purple"><b>Dragonfly class </b> </color>- Fastest Firing, but
+    slower than the Mantis class ship.  Not all enemies are unprotected, if you see
+    enemy bosses are protected by shields make sure to match your shot colour to
+    get a hit.
 
     Having another colour option can really help!'
   m_isRightToLeft: 0
@@ -1345,6 +1346,7 @@ MonoBehaviour:
   shipList: []
   healingZone: {fileID: 0}
   healingZoneRadius: 3.25
+  playerHealthScript: {fileID: 0}
 --- !u!58 &513285208
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -1585,6 +1587,7 @@ MonoBehaviour:
   shipList: []
   healingZone: {fileID: 0}
   healingZoneRadius: 3.25
+  playerHealthScript: {fileID: 0}
 --- !u!58 &578060418
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -1996,9 +1999,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: <color="red"><b>Artemis class </b> </color>- With all those missile flying
-    you are going to need some healing! Simply fly into the red healing zone to sort
-    yourself out
+  m_text: "<color=\"red\"><b>Artemis class </b> </color>- With all those missile
+    flying you are going to need some healing! \nSimply fly into the red ship or
+    into the red healing zone to sort yourself out.  Press <color=#FCD434>Q</color>
+    to activate the larger healing zone!"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: db558fec6c9e8d74d9f441c26bffc0b7, type: 2}
   m_sharedMaterial: {fileID: 6025169836974605304, guid: db558fec6c9e8d74d9f441c26bffc0b7,
@@ -2162,7 +2166,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 2, y: 1.001, z: 0.035}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -525.71, y: -363.72}
+  m_AnchoredPosition: {x: -525.71, y: -362.7}
   m_SizeDelta: {x: 27.69, y: 8.85}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &810084283
@@ -2810,7 +2814,7 @@ MonoBehaviour:
     and others
 
     Press <color=#FCD434>E</color> to activate, but make sure your
-    really need it as it won''t last forever'
+    really need it as your own ships missiles won''t go through it!'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: db558fec6c9e8d74d9f441c26bffc0b7, type: 2}
   m_sharedMaterial: {fileID: 6025169836974605304, guid: db558fec6c9e8d74d9f441c26bffc0b7,
