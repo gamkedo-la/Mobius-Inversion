@@ -127,13 +127,16 @@ public class PlayerHealth : MonoBehaviour
 
         if (other.gameObject.layer == LayerMask.NameToLayer("PlayerShip"))
         {
-            Heal(10);
-            //StartCoroutine(HealDelay(waitTime));
-            if (healingParticles)
+            if (currentHealth < maxHealth)
             {
-                healingParticles.gameObject.SetActive(true);
+                Heal(10);
+                //StartCoroutine(HealDelay(waitTime));
+                if (healingParticles)
+                {
+                    healingParticles.gameObject.SetActive(true);
+                }
+                //StopCoroutine(HealDelay(waitTime));           
             }
-            //StopCoroutine(HealDelay(waitTime));           
         }
         
     }
