@@ -22,6 +22,8 @@ public class PlayerHealth : MonoBehaviour
 
     public GameObject gameObjectHeal;
 
+    public bool lowHealthStart = false;
+
 
     // Start is called before the first frame update
     void Start()
@@ -79,6 +81,11 @@ public class PlayerHealth : MonoBehaviour
                 shield.gameObject.SetActive(false);
             }
         }*/
+
+        if(lowHealthStart)
+        {
+            currentHealth = 10;
+        }
     }
 
     void OnCollisionEnter2D(Collision2D other)
@@ -103,6 +110,23 @@ public class PlayerHealth : MonoBehaviour
             Destroy(other.gameObject);
         }
 
+        if (other.gameObject.layer == LayerMask.NameToLayer("PlayerShip"))
+        {
+            Heal(10);
+        }
+    }
+
+    void OnCollisionStay(Collision other)
+    {
+        if (other.gameObject.layer == LayerMask.NameToLayer("PlayerShip"))
+        {
+            Heal(10);
+        }
+    }
+
+    void OnCollisionExit(Collision other)
+    {
+        
     }
 
     void Heal(int heal)
