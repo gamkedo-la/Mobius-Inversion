@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerShield : MonoBehaviour
 {
-   /* public HealthBarScript shieldbar;
+    public HealthBarScript shieldbar;
     public PlayerHealth shieldMaxHealth;
     public PlayerHealth shieldCurrentHealth;
     public GameObject enemyExplosion;
@@ -22,5 +22,4 @@ public class PlayerShield : MonoBehaviour
             Destroy(other.gameObject);
         }
     }
-    */
 }

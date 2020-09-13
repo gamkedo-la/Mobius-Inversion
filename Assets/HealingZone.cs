@@ -9,8 +9,6 @@ public class HealingZone : MonoBehaviour
     public float healingZoneRadius = 3.25f;
     private float previousHealingZoneRadius;
 
-    public PlayerHealth playerHealth;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -33,7 +31,7 @@ public class HealingZone : MonoBehaviour
                 float dist = Vector2.Distance(transform.position, shipList[i].transform.position);
                 if(dist < healingZoneRadius)
                 {
-                    Debug.Log("Healing Ship" + shipList[i].name);               
+                    //Debug.Log("Healing Ship" + shipList[i].name);               
                 }
             }
         }
