@@ -76,7 +76,7 @@ public class PlayerHealth : MonoBehaviour
             }
         }
 
-        /*if (healingzone)
+        if (healingzone)
         {
             if(Input.GetKey(KeyCode.Q))
             {
@@ -88,7 +88,7 @@ public class PlayerHealth : MonoBehaviour
                 healActive = false;
                 healingzone.gameObject.SetActive(false);
             }
-        }*/
+        }
 
         /*
         if(shield && shieldTimeUp > 0)

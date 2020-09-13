@@ -52,7 +52,7 @@ public class StatsManager : MonoBehaviour
     private void IncrementStatPlayerDeaths(PlayerControl playerControl)
     {
         playerDeaths++;
-        Debug.Log(playerControl.thisShip + " ship suffered critical damage");
+        //Debug.Log(playerControl.thisShip + " ship suffered critical damage");
         overallScore -= playerDeathPenaltyValue;
         ShowOverallScore();
         StartEnemiesKilledSlider();
