@@ -19,8 +19,12 @@ public class PlayerHealth : MonoBehaviour
     public int shieldCurrentHealth;
     public float shieldRegen;
     public GameObject gameObjectShield;
+    public float waitTime;
+    public bool healActive;
 
     public GameObject gameObjectHeal;
+
+    public GameObject healingParticles;
 
     public bool lowHealthStart = false;
 
@@ -31,10 +35,16 @@ public class PlayerHealth : MonoBehaviour
         pcScript = GetComponent<PlayerControl>();
         shield = GetComponentInChildren<PlayerShieldRedHit>();
         healingzone = GetComponentInChildren<HealingZone>();
+        healingParticles = GameObject.Find("/HealingParticles");
+        healActive = false;
         currentHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
         //gameObjectShield = GameObject.Find("/Players&UI/PlayerShipBlue/PlayerShield");
         //gameObjectShield = shield.gameObject;
+        if(healingParticles)
+        {
+            healingParticles.gameObject.SetActive(false);
+        }
         if (shield)
         {
             shield.gameObject.SetActive(false);
@@ -64,10 +74,12 @@ public class PlayerHealth : MonoBehaviour
         {
             if(Input.GetKey(KeyCode.Q))
             {
+                healActive = true;
                 healingzone.gameObject.SetActive(true);
             }
             else
             {
+                healActive = false;
                 healingzone.gameObject.SetActive(false);
             }
         }
@@ -110,23 +122,37 @@ public class PlayerHealth : MonoBehaviour
             Destroy(other.gameObject);
         }
 
-        if (other.gameObject.layer == LayerMask.NameToLayer("PlayerShip"))
+        if (healActive)
         {
-            Heal(10);
+            if (other.gameObject.layer == LayerMask.NameToLayer("PlayerShip"))
+            {
+                StartCoroutine(HealDelay(waitTime));
+                if (healingParticles)
+                {
+                    healingParticles.gameObject.SetActive(true);
+                }
+            }
         }
     }
 
-    void OnCollisionStay(Collision other)
+    /*void OnCollisionStay2D(Collision2D other)
     {
         if (other.gameObject.layer == LayerMask.NameToLayer("PlayerShip"))
         {
-            Heal(10);
+            yield return StartCoroutine(HealDelay());
+            if (healingParticles)
+            {
+                healingParticles.gameObject.SetActive(true);
+            }
         }
-    }
+    }*/
 
-    void OnCollisionExit(Collision other)
+    void OnCollisionExit2D(Collision2D other)
     {
-        
+        if (healingParticles)
+        {
+            healingParticles.gameObject.SetActive(false);
+        }
     }
 
     void Heal(int heal)
@@ -141,5 +167,14 @@ public class PlayerHealth : MonoBehaviour
         //Debug.Log("Health now is " + currentHealth);
         healthBar.SetHealth(currentHealth);
         pcScript.DeathCheckThenRespawn(currentHealth<=0);       
+    }
+
+    public IEnumerator HealDelay(float waitTime)
+    {
+        while (true)
+        {
+            Heal(10);
+            yield return new WaitForSeconds(waitTime);
+        }
     }
 }
