@@ -162,7 +162,7 @@ public class PlayerHealth : MonoBehaviour
         }
     }
 
-    void Heal(int heal)
+    public void Heal(int heal)
     {
         currentHealth += heal;
         healthBar.SetHealth(currentHealth);
