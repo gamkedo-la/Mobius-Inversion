@@ -232,7 +232,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -435.89856, y: 106.00421}
+  m_AnchoredPosition: {x: -435.89856, y: 226.0042}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &134329305
@@ -255,23 +255,23 @@ MonoBehaviour:
       m_Calls: []
   m_text: "Justin Chin: Project lead and core gameplay, enemy waypoints logic, ship
     colors, projectiles logic, autofire, level design, health bar, enemy waves, healing
-    zone, background building placement\nAndy King: Shield deflection shader, tutorial,
+    zone, background building placement\n\nAndy King: Shield deflection shader, tutorial,
     explosion vfx and related particles (smoke, animations, model chunks), framerate
     control, shot/explosion sounds and related integration, background music hookup,
     boss background audio, audio mixer set up, song transition, background UI splash
     screen, font selection and integration, start menu, UI hover effects, shader
-    instancing support, options menu, icon, canvas dynamic embed resize, menu backgroudn
-    blur, model orientation fixes\nWill McKay: Boss design (all modes) and related
+    instancing support, options menu, icon, canvas dynamic embed resize, menu background
+    blur, model orientation fixes\n\nWill McKay: Boss design (all modes) and related
     code, including boss homing missile / bombs / shield / special, boss model, boss
     intro sequence, color-coded player shots support, enemy grid spawn tool for editor,
-    preview fix, ship selection toggle, sound integration, AI fix\nCassidy Noble:
+    preview fix, ship selection toggle, sound integration, AI fix\n\nCassidy Noble:
     Variations on asteroids and projectiles, enemy and player ship models, boss and
     planet models, space elements, several additional Tokyo background building clusters
-    \nBrian J. Boucher: Tokyo tower building model, docomo building, tokyo skybox,
-    \nPhilip Greene: Player stats tracking, kill counting, deaths and HP tally, AI
-    bug fix, summary fade, interface toggle, player rating\nAndrew Mushel: Pause
-    key, screen boundary enforced, editor waypoint visualization, path selection\nGabriel
-    Cornish (Apollo group): Two additional background voxel building clusters\nChris
+    \n\nBrian J. Boucher: Tokyo tower building model, docomo building, tokyo skybox
+    \n\nPhilip Greene: Player stats tracking, kill counting, deaths and HP tally,
+    AI bug fix, summary fade, interface toggle, player rating\n\nAndrew Mushel: Pause
+    key, screen boundary enforced, editor waypoint visualization, path selection\n\nGabriel
+    Cornish (Apollo group): Two additional background voxel building clusters\n\nChris
     DeLeon: Additional background voxel buildings, compiled credits\n\nGame developed
     in HomeTeamGameDev.com Outpost group"
   m_isRightToLeft: 0
@@ -319,7 +319,7 @@ MonoBehaviour:
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 4
-  m_firstOverflowCharacterIndex: -1
+  m_firstOverflowCharacterIndex: 1346
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
   m_isTextTruncated: 0
@@ -343,12 +343,12 @@ MonoBehaviour:
   m_margin: {x: -202.44992, y: -77.37399, z: -970.4211, w: -652.39197}
   m_textInfo:
     textComponent: {fileID: 134329305}
-    characterCount: 1643
+    characterCount: 1650
     spriteCount: 0
-    spaceCount: 225
+    spaceCount: 233
     wordCount: 222
     linkCount: 0
-    lineCount: 23
+    lineCount: 31
     pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
@@ -906,7 +906,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 438, y: -384}
+  m_AnchoredPosition: {x: 438, y: -504}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &355835469
