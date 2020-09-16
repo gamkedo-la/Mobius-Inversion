@@ -53,6 +53,7 @@ public class BossStages : MonoBehaviour
             Stage = 4;
         }
 
+        /* Skipping Boss Code
         if (Input.GetKeyDown(KeyCode.N))
         {
             Stage++;
@@ -60,6 +61,7 @@ public class BossStages : MonoBehaviour
             {
                 Stage = 4;
             }
+            */
 
             switch (Stage)
             {
