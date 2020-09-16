@@ -930,6 +930,9 @@ MonoBehaviour:
   shieldMaxHealth: {fileID: 0}
   shieldCurrentHealth: {fileID: 0}
   enemyExplosion: {fileID: 0}
+  healingUp: {fileID: 0}
+  blueShip: {fileID: 0}
+  blueShipTransform: {fileID: 0}
   decaytime: 3
   shieldRaycast: {fileID: 342160425}
 --- !u!114 &342160425
@@ -2433,7 +2436,12 @@ MonoBehaviour:
     or <color=#FCD434>4</color>
 
 
-    Try it now to bring up ship specific info'
+    Try it now to bring up ship specific info
+
+
+    Bonus:
+    Pressing <color=#FCD434>B</color>  spawns boss & pressing <color=#FCD434>N</color>
+    skips to next Boss Stage'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: db558fec6c9e8d74d9f441c26bffc0b7, type: 2}
   m_sharedMaterial: {fileID: 6025169836974605304, guid: db558fec6c9e8d74d9f441c26bffc0b7,
@@ -2469,7 +2477,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 2
-  m_textAlignment: 264
+  m_textAlignment: 258
   m_characterSpacing: 0
   m_wordSpacing: 0
   m_lineSpacing: 0
@@ -2479,7 +2487,7 @@ MonoBehaviour:
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
-  m_firstOverflowCharacterIndex: 70
+  m_firstOverflowCharacterIndex: 66
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
   m_isTextTruncated: 0
@@ -2503,12 +2511,12 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 1015266830}
-    characterCount: 169
+    characterCount: 239
     spriteCount: 0
-    spaceCount: 34
-    wordCount: 35
+    spaceCount: 49
+    wordCount: 47
     linkCount: 0
-    lineCount: 10
+    lineCount: 15
     pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
@@ -2597,7 +2605,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 2, y: 1.001, z: 0.035}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -526.8, y: -360.77}
+  m_AnchoredPosition: {x: -526.8, y: -358.6}
   m_SizeDelta: {x: 27.69, y: 8.85}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &1085674508
@@ -3018,6 +3026,9 @@ MonoBehaviour:
   shieldMaxHealth: {fileID: 0}
   shieldCurrentHealth: {fileID: 0}
   enemyExplosion: {fileID: 0}
+  healingUp: {fileID: 0}
+  blueShip: {fileID: 0}
+  blueShipTransform: {fileID: 0}
   decaytime: 3
   shieldRaycast: {fileID: 1234587360}
 --- !u!114 &1234587360
