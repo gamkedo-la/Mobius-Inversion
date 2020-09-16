@@ -55,13 +55,15 @@ public class BossStages : MonoBehaviour
 
         /* Skipping Boss Code
         if (Input.GetKeyDown(KeyCode.N))
-        {
+        { 
             Stage++;
+        
+            */
             if (Stage > 4)
             {
                 Stage = 4;
             }
-            */
+            
 
             switch (Stage)
             {
@@ -78,7 +80,7 @@ public class BossStages : MonoBehaviour
                     Destroy(Core);
                     break;
             }
-        }
+        //} Also skip code
 
         //additional behaviors go here, stage one movement is currently handled in BossSimpleMovement 
         //Attack patterns are planned to be handled in additional scripts
