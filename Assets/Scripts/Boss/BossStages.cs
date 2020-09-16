@@ -53,7 +53,7 @@ public class BossStages : MonoBehaviour
             Stage = 4;
         }
 
-        if (Input.GetKeyDown(KeyCode.G))
+        if (Input.GetKeyDown(KeyCode.N))
         {
             Stage++;
             if (Stage > 4)
