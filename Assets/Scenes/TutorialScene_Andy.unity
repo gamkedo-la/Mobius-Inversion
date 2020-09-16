@@ -2439,7 +2439,7 @@ MonoBehaviour:
     Try it now to bring up ship specific info
 
 
-    Bonus:
+    Cheats:
     Pressing <color=#FCD434>B</color>  spawns boss & pressing <color=#FCD434>N</color>
     skips to next Boss Stage'
   m_isRightToLeft: 0
@@ -2511,7 +2511,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 1015266830}
-    characterCount: 239
+    characterCount: 240
     spriteCount: 0
     spaceCount: 49
     wordCount: 47
